@@ -1,0 +1,15 @@
+{
+  "name": "Garden",
+  "displayName": "Garden",
+  "expo": {
+    "name": "Garden",
+    "sdkVersion": "25.0.0",
+    "description": "Garden",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.solavo.garden"
+    }
+  }
+}
