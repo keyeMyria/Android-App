@@ -77,7 +77,6 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => {
-    console.log('Props change');
     return {
         currentID: state.id,
         machine: state.machine,
@@ -90,12 +89,12 @@ const mapDispatchToProps = (dispatch, props) => {
         addCurrentID: (id) => {
             dispatch(act.addCurrentID(id));
         },
-        getListName: (arID) => {
-            dispatch(act.getListName(arID));
-        },
         status_page: (status) => {
             dispatch(act.status_page(status));
-        }
+        },
+        getListName: () => {
+            dispatch(act.getListName());
+        },
     }
 }
 

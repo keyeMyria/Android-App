@@ -6,7 +6,8 @@ import {
     View,
     Button,
     ToastAndroid,
-    TextInput
+    TextInput,
+    BackAndroid
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import * as act from '../actions/index';
@@ -27,7 +28,7 @@ export class AddName extends Component {
                 />
                 <Button
                     onPress={() => this.onAddName()}
-                    title="Learn More"
+                    title="Thêm thiết bị"
                     color="#841584"
                     accessibilityLabel="Learn more about this purple button"
                 />
@@ -38,6 +39,10 @@ export class AddName extends Component {
     onAddName = () => {
         this.props.add_name(this.state.text);
         this.props.status_page('CONTROL');
+        alert(`Vui lòng mở lại ứng dụng khi thay đổi phần cứng!`);
+        setTimeout(() => {
+            BackAndroid.exitApp();
+        }, 1000);
     }
 
 }

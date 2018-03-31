@@ -5,7 +5,7 @@ import {
     Text,
     View,
     Button,
-    ToastAndroid
+    ToastAndroid,
 } from 'react-native';
 import { BarCodeScanner, Permissions } from 'expo';
 import { connect } from 'react-redux';
@@ -47,15 +47,7 @@ export class ScanScreen extends Component {
         this.props.handle_qrcode_read({ type, data });
         alert(`Đã quét xong, chuẩn bị chuyển trang!`);
         this.props.status_page('NAME');
-        this.props.getMachineID();
         this.props.getListName();
-    }
-}
-
-
-const mapStateToProps = state => {
-    return {
-
     }
 }
 
@@ -76,6 +68,7 @@ const mapDispatchToProps = (dispatch, props) => {
         getListName: () => {
             dispatch(act.getListName());
         },
+
     }
 }
 

@@ -6,13 +6,15 @@ import {
     View,
     Button,
     ToastAndroid,
-    AsyncStorage
+    AsyncStorage,
+    BackAndroid
 } from 'react-native';
 import { Client, Message } from 'react-native-paho-mqtt';
 import NhietDo from '../components/NhietDo';
 import CaiDat from '../components/CaiDat';
 import AddBar from '../components/AddBar';
 import { connect } from 'react-redux';
+import RestartAndroid from 'react-native-restart-android'
 
 export class Home extends Component {
     constructor(props) {
@@ -58,6 +60,10 @@ export class Home extends Component {
                 tmpNames.splice(index, 1);
                 AsyncStorage.setItem('machine', JSON.stringify(tmp));
                 AsyncStorage.setItem('name', JSON.stringify(tmpNames));
+                alert(`Vui lòng mở lại ứng dụng khi thay đổi phần cứng!`);
+                setTimeout(() => {
+                    BackAndroid.exitApp();
+                }, 1000);
             })
         })
     }
@@ -78,12 +84,8 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToProps = (dispatch, props) => {
-    return {
 
-    }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, null)(Home);
 
 

@@ -18,22 +18,10 @@ export const Navigator = TabNavigator({
 
 
 export class AppRedux extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			onScan: false,
-			onControl: false,
-			onSlashScreen: true,
-			onAddName: false,
-			machine: []
-		}
-	}
-
 	componentWillMount() {
 		this.props.getMachineID();
 		this.props.status_page('SLASH')
 	}
-
 
 	render() {
 		var { machine, status } = this.props;
@@ -47,7 +35,7 @@ export class AppRedux extends React.Component {
 				</View>
 				<View style={{ flex: 1 }}>
 					{status === 'SLASH' ? <SlashScreen /> : <View></View>}
-					{status === 'SCAN' ? <ScanScreen handleBarCodeRead={this.handleBarCodeRead} /> : <View></View>}
+					{status === 'SCAN' ? <ScanScreen /> : <View></View>}
 					{status === 'CONTROL' ? <Navigator /> : <View></View>}
 					{status === 'NAME' ? <AddName onAddName={this.onAddName} /> : <View></View>}
 				</View>
@@ -64,14 +52,6 @@ export class AppRedux extends React.Component {
 
 		this.setState({
 			onAddName: false
-		})
-	}
-
-	handleBarCodeRead = (data) => {
-		this.setState({
-			onScan: false,
-			machine: tmp,
-			onAddName: true
 		})
 	}
 }
