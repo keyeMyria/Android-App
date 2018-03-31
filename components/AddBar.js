@@ -31,9 +31,6 @@ export class AddBar extends Component {
 
     componentWillMount() {
         this.props.getListName();
-    }
-
-    componentDidUpdate() {
         if (this.props.machine[0] !== undefined)
             this.props.addCurrentID(this.props.machine[0]);
     }
@@ -56,13 +53,12 @@ export class AddBar extends Component {
     }
 
     onPressAdd = () => {
-        this.props.onPressAdd();
+        this.props.status_page('SCAN');
     }
 
     onPress = (value) => {
-        console.log(value);
-        this.props.onPress(value);
         this.props.addCurrentID(value);
+        this.props.status_page('CONTROL');
     }
 }
 
@@ -81,7 +77,7 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => {
-    console.log(state);
+    console.log('Props change');
     return {
         currentID: state.id,
         machine: state.machine,
@@ -96,6 +92,9 @@ const mapDispatchToProps = (dispatch, props) => {
         },
         getListName: (arID) => {
             dispatch(act.getListName(arID));
+        },
+        status_page: (status) => {
+            dispatch(act.status_page(status));
         }
     }
 }

@@ -44,9 +44,11 @@ export class ScanScreen extends Component {
     }
 
     handleBarCodeRead = ({ type, data }) => {
-        this.props.handleBarCodeRead({ type, data });
-        this.props.addScannedID({ type, data });
+        this.props.handle_qrcode_read({ type, data });
         alert(`Đã quét xong, chuẩn bị chuyển trang!`);
+        this.props.status_page('NAME');
+        this.props.getMachineID();
+        this.props.getListName();
     }
 }
 
@@ -61,7 +63,19 @@ const mapDispatchToProps = (dispatch, props) => {
     return {
         addScannedID: (scanned) => {
             dispatch(act.addScannedID(scanned));
-        }
+        },
+        handle_qrcode_read: ({ type, data }) => {
+            dispatch(act.handle_qrcode_read({ type, data }));
+        },
+        status_page: (status) => {
+            dispatch(act.status_page(status));
+        },
+        getMachineID: () => {
+            dispatch(act.getMachineID());
+        },
+        getListName: () => {
+            dispatch(act.getListName());
+        },
     }
 }
 

@@ -9,11 +9,13 @@ import {
     TextInput
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import * as act from '../actions/index';
+import { connect } from 'react-redux';
 
-export default class AddName extends Component {
+export class AddName extends Component {
     constructor(props) {
         super(props);
-        this.state = { text: 'Useless Placeholder' };
+        this.state = { text: 'Đặt tên thiết bị' };
     }
     render() {
         return (
@@ -34,7 +36,8 @@ export default class AddName extends Component {
         );
     }
     onAddName = () => {
-        this.props.onAddName(this.state.text);
+        this.props.add_name(this.state.text);
+        this.props.status_page('CONTROL');
     }
 
 }
@@ -52,3 +55,17 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
     }
 });
+
+
+const mapDispatchToProps = (dispatch, props) => {
+    return {
+        add_name: (name) => {
+            dispatch(act.add_name(name));
+        },
+        status_page: (status) => {
+            dispatch(act.status_page(status));
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(AddName);

@@ -49,11 +49,16 @@ export class Home extends Component {
         );
     }
     onDelete = () => {
-        AsyncStorage.getItem('device').then(data => {
+        AsyncStorage.getItem('machine').then(data => {
             let tmp = JSON.parse(data);
             let index = tmp.indexOf(this.props.currentID);
-            tmp.splice(index, 1);
-            AsyncStorage.setItem('device', JSON.stringify(tmp));
+            AsyncStorage.getItem('name').then(names => {
+                let tmpNames = JSON.parse(names);
+                tmp.splice(index, 1);
+                tmpNames.splice(index, 1);
+                AsyncStorage.setItem('machine', JSON.stringify(tmp));
+                AsyncStorage.setItem('name', JSON.stringify(tmpNames));
+            })
         })
     }
 }
@@ -75,7 +80,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-        
+
     }
 }
 

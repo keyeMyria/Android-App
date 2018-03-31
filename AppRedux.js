@@ -31,43 +31,28 @@ export class AppRedux extends React.Component {
 
 	componentWillMount() {
 		this.props.getMachineID();
+		this.props.status_page('SLASH')
 	}
 
 
 	render() {
-		var { machine } = this.props;
+		var { machine, status } = this.props;
 		return (
 			<View style={{ flex: 1, flexDirection: 'column' }}>
 				<StatusBar
 					hidden={true}
 				/>
 				<View style={{ height: 35 }}>
-					<AddBar onPressAdd={this.onPressAdd} onPress={this.onPress} />
+					<AddBar onPress={this.onPress} />
 				</View>
 				<View style={{ flex: 1 }}>
-					{this.state.onScan === true ? <ScanScreen handleBarCodeRead={this.handleBarCodeRead} /> : <View></View>}
-					{this.state.onControl === true ? <Navigator /> : <View></View>}
-					{this.state.SlashScreen === true ? <SlashScreen /> : <View></View>}
-					{this.state.onAddName === true ? <AddName onAddName={this.onAddName} /> : <View></View>}
+					{status === 'SLASH' ? <SlashScreen /> : <View></View>}
+					{status === 'SCAN' ? <ScanScreen handleBarCodeRead={this.handleBarCodeRead} /> : <View></View>}
+					{status === 'CONTROL' ? <Navigator /> : <View></View>}
+					{status === 'NAME' ? <AddName onAddName={this.onAddName} /> : <View></View>}
 				</View>
 			</View>
 		);
-	}
-
-	onPressAdd = () => {
-		this.setState({
-			onScan: true,
-			onControl: false,
-			onSlashScreen: false
-		})
-	}
-
-	onPress = (data) => {
-		this.setState({
-			onControl: true,
-			onScan: false,
-			onSlashScreen: false
-		})
 	}
 
 	onAddName = (name) => {
@@ -83,18 +68,11 @@ export class AppRedux extends React.Component {
 	}
 
 	handleBarCodeRead = (data) => {
-		var tmp = this.props.machine;
-		tmp.push(data.data);
-		if (data.data) {
-			if (data.type === 256) {
-				AsyncStorage.setItem('machine', JSON.stringify(tmp));
-				this.setState({
-					onScan: false,
-					machine: tmp,
-					onAddName: true
-				})
-			}
-		}
+		this.setState({
+			onScan: false,
+			machine: tmp,
+			onAddName: true
+		})
 	}
 }
 
@@ -109,10 +87,12 @@ const styles = StyleSheet.create({
 
 
 const mapStateToProps = state => {
+	console.log(state);
 	return {
 		machine: state.machine,
 		scanned: state.scanned,
-		id: state.id
+		id: state.id,
+		status: state.status
 	}
 }
 
@@ -120,6 +100,9 @@ const mapDispatchToProps = (dispatch, props) => {
 	return {
 		getMachineID: () => {
 			dispatch(act.getMachineID());
+		},
+		status_page: (status) => {
+			dispatch(act.status_page(status));
 		}
 	}
 }
