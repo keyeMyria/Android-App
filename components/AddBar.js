@@ -8,8 +8,10 @@ import {
     ToastAndroid
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import { connect } from 'react-redux';
+import * as act from '../actions/index';
 
-export default class AddBar extends Component {
+export class AddBar extends Component {
     render() {
         let { machine } = this.props;
         return (
@@ -49,8 +51,8 @@ export default class AddBar extends Component {
     }
 
     onPress = (value) => {
-        console.log(value)
-        //this.props.onPress();
+        this.props.onPress(value);
+        this.props.addCurrentID(value);
     }
 }
 
@@ -67,3 +69,15 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
     }
 });
+
+
+
+const mapDispatchToProps = (dispatch, props) => {
+    return {
+        addCurrentID: (id) => {
+            dispatch(act.addCurrentID(id));
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(AddBar);

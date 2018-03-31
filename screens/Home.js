@@ -35,8 +35,19 @@ export default class Home extends Component {
                 </View>
                 <NhietDo />
                 <CaiDat />
+                <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
+                    <Button
+                        onPress={() => this.onDelete()}
+                        title="Delete"
+                        color="#841584"
+                        accessibilityLabel="Learn more about this purple button"
+                    />
+                </View>
             </View>
         );
+    }
+    onDelete = () => {
+        console.log("Delete");
     }
 }
 
