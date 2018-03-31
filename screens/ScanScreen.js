@@ -8,9 +8,10 @@ import {
     ToastAndroid
 } from 'react-native';
 import { BarCodeScanner, Permissions } from 'expo';
+import { connect } from 'react-redux';
+import * as act from '../actions/index';
 
-
-export default class Home extends Component {
+export class ScanScreen extends Component {
     state = {
         hasCameraPermission: null,
     }
@@ -44,9 +45,28 @@ export default class Home extends Component {
 
     handleBarCodeRead = ({ type, data }) => {
         this.props.handleBarCodeRead({ type, data });
+        this.props.addScannedID({ type, data });
         alert(`Đã quét xong, chuẩn bị chuyển trang!`);
     }
 }
+
+
+const mapStateToProps = state => {
+    return {
+
+    }
+}
+
+const mapDispatchToProps = (dispatch, props) => {
+    return {
+        addScannedID: (scanned) => {
+            dispatch(act.addScannedID(scanned));
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ScanScreen);
+
 
 const styles = StyleSheet.create({
     container: {

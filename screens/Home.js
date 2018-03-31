@@ -5,14 +5,16 @@ import {
     Text,
     View,
     Button,
-    ToastAndroid
+    ToastAndroid,
+    AsyncStorage
 } from 'react-native';
 import { Client, Message } from 'react-native-paho-mqtt';
 import NhietDo from '../components/NhietDo';
 import CaiDat from '../components/CaiDat';
 import AddBar from '../components/AddBar';
+import { connect } from 'react-redux';
 
-export default class Home extends Component {
+export class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -47,7 +49,12 @@ export default class Home extends Component {
         );
     }
     onDelete = () => {
-        console.log("Delete");
+        AsyncStorage.getItem('device').then(data => {
+            let tmp = JSON.parse(data);
+            let index = tmp.indexOf(this.props.currentID);
+            tmp.splice(index, 1);
+            AsyncStorage.setItem('device', JSON.stringify(tmp));
+        })
     }
 }
 
@@ -59,3 +66,19 @@ const styles = StyleSheet.create({
         backgroundColor: '#F5FCFF',
     }
 });
+
+const mapStateToProps = state => {
+    return {
+        currentID: state.id
+    }
+}
+
+const mapDispatchToProps = (dispatch, props) => {
+    return {
+        
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
+
+

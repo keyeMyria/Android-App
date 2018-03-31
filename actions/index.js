@@ -1,4 +1,5 @@
 import * as Type from '../constants/ActionTypes';
+import { AsyncStorage } from 'react-native';
 
 export const addCurrentID = (id) => {
     return {
@@ -7,10 +8,54 @@ export const addCurrentID = (id) => {
     }
 }
 
+export const getListName = () => {
+    return dispatch => {
+        try {
+            AsyncStorage.getItem('name').then((data) => {
+                if (data !== null) {
+                    dispatch(dispatchListName(JSON.parse(data)));
+                }
+            })
+        } catch (error) {
+            dispatch(dispatchListName([]));
+        }
+    }
+}
 
+export const dispatchListName = (data) => {
+    return {
+        type: Type.GET_LIST_NAME,
+        name: data
+    }
+}
 
+export const getMachineID = (machine) => {
+    return dispatch => {
+        try {
+            AsyncStorage.getItem('machine').then((data) => {
+                if (data !== null) {
+                    dispatch(dispatchMachineID(JSON.parse(data)));
+                }
+            })
+        } catch (error) {
+            dispatch(dispatchMachineID([]));
+        }
+    }
+}
 
+export const dispatchMachineID = (data) => {
+    return {
+        type: Type.GET_MACHINE_ID,
+        machine: data
+    }
+}
 
+export const addScannedID = (scanned) => {
+    return {
+        type: Type.ADD_SCANNED_ID,
+        scanned: scanned
+    }
+}
 
 /*
 
@@ -22,12 +67,7 @@ export const actGetToken = () => {
     }
 }
 
-export const dispatchGetToken = (data) => {
-    return {
-        type: Type.GET_TOKEN,
-        token: data
-    }
-}
+
 
 
 export const actGetState = () => {

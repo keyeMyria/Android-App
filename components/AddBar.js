@@ -13,7 +13,7 @@ import * as act from '../actions/index';
 
 export class AddBar extends Component {
     render() {
-        let { machine } = this.props;
+        let { name, machine } = this.props;
         return (
             <View style={styles.container}>
                 <View style={styles.wrapBTN}>
@@ -24,18 +24,27 @@ export class AddBar extends Component {
                         accessibilityLabel="Bấm vào để thêm vào thiết bị"
                     />
                 </View>
-                {this.renderDetailMachine(machine)}
+                {this.renderDetailMachine(name, machine)}
             </View>
         );
     }
 
-    renderDetailMachine = (machine) => {
+    componentWillMount() {
+        this.props.getListName();
+    }
+
+    componentDidUpdate() {
+        if (this.props.machine[0] !== undefined)
+            this.props.addCurrentID(this.props.machine[0]);
+    }
+
+    renderDetailMachine = (name, machine) => {
         var result = null;
-        result = machine.map((value, index) => {
+        result = name.map((value, index) => {
             return (
                 <View style={styles.wrapBTN} key={index}>
                     <Button
-                        onPress={() => this.onPress(value)}
+                        onPress={() => this.onPress(machine[index])}
                         title={value}
                         color="#060428"
                         accessibilityLabel="Bấm vào để điều khiển thiết bị"
@@ -51,6 +60,7 @@ export class AddBar extends Component {
     }
 
     onPress = (value) => {
+        console.log(value);
         this.props.onPress(value);
         this.props.addCurrentID(value);
     }
@@ -70,14 +80,24 @@ const styles = StyleSheet.create({
     }
 });
 
-
+const mapStateToProps = state => {
+    console.log(state);
+    return {
+        currentID: state.id,
+        machine: state.machine,
+        name: state.name
+    }
+}
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
         addCurrentID: (id) => {
             dispatch(act.addCurrentID(id));
+        },
+        getListName: (arID) => {
+            dispatch(act.getListName(arID));
         }
     }
 }
 
-export default connect(null, mapDispatchToProps)(AddBar);
+export default connect(mapStateToProps, mapDispatchToProps)(AddBar);

@@ -35,7 +35,6 @@ export default class AddName extends Component {
     }
     onAddName = () => {
         this.props.onAddName(this.state.text);
-        console.log(this.state);
     }
 
 }
