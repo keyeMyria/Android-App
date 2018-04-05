@@ -9,6 +9,7 @@ import {
     AppRegistry
 } from 'react-native';
 import { Client, Message } from 'react-native-paho-mqtt';
+import { connect } from 'react-redux';
 
 
 export const myStorage = {
@@ -22,15 +23,15 @@ export const myStorage = {
 };
 
 
-export const client = new Client({ uri: 'wss://m13.cloudmqtt.com:34250/', clientId: "android_" + parseInt(Math.random() * 100, 10), storage: myStorage });
+export const client = new Client({ uri: 'ws://solavo.ddns.net:8883/', clientId: "android_" + parseInt(Math.random() * 100, 10), storage: myStorage });
 var options = {
-    useSSL: true,
-    userName: "jepjknnb",
-    password: "B9Io8J5H88fP",
+    useSSL: false,
+    userName: "sammy",
+    password: "123456789",
 }
 
 
-export default class CaiDat extends Component {
+export class CaiDat extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -46,8 +47,7 @@ export default class CaiDat extends Component {
         }
     }
 
-
-    componentWillMount() {
+    componentDidMount() {
         client.on('connectionLost', (responseObject) => {
             if (responseObject.errorCode !== 0) {
                 this.setState({
@@ -71,7 +71,7 @@ export default class CaiDat extends Component {
                 connect: true
             })
         }).then(() => {
-            return client.subscribe('data');
+            console.log('Connected');
         }).catch((responseObject) => {
             if (responseObject.errorCode !== 0) {
                 this.setState({
@@ -79,7 +79,12 @@ export default class CaiDat extends Component {
                 })
             }
         });
+    }
 
+    componentWillReceiveProps() {
+        setTimeout(() => {
+            client.subscribe(this.props.id);
+        }, 100)
     }
 
 
@@ -196,7 +201,7 @@ export default class CaiDat extends Component {
     onSuong = () => {
         if (this.state.connect) {
             const message = new Message(JSON.stringify({ suong: true }));
-            message.destinationName = 'control';
+            message.destinationName = this.props.id;
             client.send(message);
             ToastAndroid.showWithGravity(
                 'Hoàn thành !',
@@ -224,7 +229,7 @@ export default class CaiDat extends Component {
     offSuong = () => {
         if (this.state.connect) {
             const message = new Message(JSON.stringify({ suong: false }));
-            message.destinationName = 'control';
+            message.destinationName = this.props.id;
             client.send(message);
             ToastAndroid.showWithGravity(
                 'Hoàn thành !',
@@ -242,7 +247,7 @@ export default class CaiDat extends Component {
     onBom = () => {
         if (this.state.connect) {
             const message = new Message(JSON.stringify({ bom: true }));
-            message.destinationName = 'control';
+            message.destinationName = this.props.id;
             client.send(message);
             ToastAndroid.showWithGravity(
                 'Hoàn thành !',
@@ -270,7 +275,7 @@ export default class CaiDat extends Component {
     offBom = () => {
         if (this.state.connect) {
             const message = new Message(JSON.stringify({ bom: false }));
-            message.destinationName = 'control';
+            message.destinationName = this.props.id;
             client.send(message);
             ToastAndroid.showWithGravity(
                 'Hoàn thành !',
@@ -319,3 +324,14 @@ const styles = StyleSheet.create({
         fontSize: 20, marginTop: 10
     }
 });
+
+
+
+const mapStateToProps = state => {
+    return {
+        id: state.id,
+    }
+}
+
+
+export default connect(mapStateToProps, null)(CaiDat);

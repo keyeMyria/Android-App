@@ -10,6 +10,7 @@ import ScanScreen from './screens/ScanScreen';
 import AddName from './components/AddName';
 import { connect } from 'react-redux';
 import * as act from './actions/index';
+require('events').EventEmitter.prototype._maxListeners = 0;
 
 export const Navigator = TabNavigator({
 	'Trang Chủ': { screen: Home },

@@ -1,5 +1,6 @@
 import * as Type from '../constants/ActionTypes';
 import { AsyncStorage } from 'react-native';
+import { decrypt } from 'react-native-simple-encryption';
 
 export const addCurrentID = (id) => {
     return {
@@ -63,7 +64,8 @@ export const handle_qrcode_read = (data) => {
             var tmp = JSON.parse(machines) || [];
             if (data.data) {
                 if (data.type === 256) {
-                    tmp.push(data.data);
+                    var code = decrypt('123456789', data.data);
+                    tmp.push(code);
                     AsyncStorage.setItem('machine', JSON.stringify(tmp)).then(() => {
                         dispatch(dispatch_qrcode_read());
                     });

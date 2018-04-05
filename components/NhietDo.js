@@ -14,8 +14,10 @@ import {
     ToastAndroid
 } from 'react-native';
 import { Client, Message } from 'react-native-paho-mqtt';
+import { connect } from 'react-redux';
+import * as act from '../actions/index';
+require('events').EventEmitter.prototype._maxListeners = 0;
 
-//Set up an in-memory alternative to global localStorage
 export const myStorage = {
     setItem: (key, item) => {
         myStorage[key] = item;
@@ -26,16 +28,15 @@ export const myStorage = {
     },
 };
 
-// Create a client instance
-export const client = new Client({ uri: 'wss://m13.cloudmqtt.com:34250/', clientId: "android_" + parseInt(Math.random() * 100, 10), storage: myStorage });
+export const client = new Client({ uri: 'ws://solavo.ddns.net:8883/', clientId: "android_" + parseInt(Math.random() * 100, 10), storage: myStorage });
 var options = {
-    useSSL: true,
-    userName: "jepjknnb",
-    password: "B9Io8J5H88fP",
+    useSSL: false,
+    userName: "sammy",
+    password: "123456789",
 }
 
 
-export default class NhietDo extends Component {
+export class NhietDo extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -51,14 +52,14 @@ export default class NhietDo extends Component {
         }
     }
 
-    componentWillMount() {
-
+    componentDidMount() {
         client.on('connectionLost', (responseObject) => {
             if (responseObject.errorCode !== 0) {
                 this.setState({
                     connect: false
                 })
             }
+            console.log(responseObject);
         });
 
         client.on('messageReceived', (message) => {
@@ -76,10 +77,10 @@ export default class NhietDo extends Component {
                 connect: true
             })
             const messcon = new Message(JSON.stringify({ connect: true }));
-            messcon.destinationName = 'connect';
+            messcon.destinationName = this.props.id;
             client.send(messcon);
         }).then(() => {
-            return client.subscribe('data');
+            console.log('Connected');
         }).catch((responseObject) => {
             if (responseObject.errorCode !== 0) {
                 this.setState({
@@ -90,7 +91,15 @@ export default class NhietDo extends Component {
     }
 
 
+    componentWillReceiveProps() {
+        setTimeout(() => {
+            client.subscribe(this.props.id);
+        }, 100)
+    }
+
+
     render() {
+        console.log(this.props.id);
         return (
             <View style={{ flex: 2, marginBottom: 50 }}>
                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }} key={"Block1"}>
@@ -124,3 +133,15 @@ const styles = StyleSheet.create({
         backgroundColor: '#F5FCFF',
     }
 });
+
+
+
+const mapStateToProps = state => {
+    return {
+        id: state.id,
+    }
+}
+
+
+export default connect(mapStateToProps, null)(NhietDo);
+

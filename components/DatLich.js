@@ -12,7 +12,9 @@ import {
     ScrollView
 } from 'react-native';
 import { Client, Message } from 'react-native-paho-mqtt';
-
+import { connect } from 'react-redux';
+import * as act from '../actions/index';
+require('events').EventEmitter.prototype._maxListeners = 0;
 
 export const myStorage = {
     setItem: (key, item) => {
@@ -25,15 +27,15 @@ export const myStorage = {
 };
 
 
-export const client = new Client({ uri: 'wss://m13.cloudmqtt.com:34250/', clientId: "android__" + parseInt(Math.random() * 100, 10), storage: myStorage });
+export const client = new Client({ uri: 'ws://solavo.ddns.net:8883/', clientId: "android_" + parseInt(Math.random() * 100, 10), storage: myStorage });
 var options = {
-    useSSL: true,
-    userName: "jepjknnb",
-    password: "B9Io8J5H88fP",
+    useSSL: false,
+    userName: "sammy",
+    password: "123456789",
 }
 
 
-export default class DatLich extends Component {
+export class DatLich extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -59,7 +61,7 @@ export default class DatLich extends Component {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         client.on('connectionLost', (responseObject) => {
             if (responseObject.errorCode !== 0) {
                 this.setState({
@@ -72,8 +74,7 @@ export default class DatLich extends Component {
                 connect: true
             })
         }).then(() => {
-            console.log('onConnect');
-            return client.subscribe('data');
+            console.log('Connected');
         }).catch((responseObject) => {
             if (responseObject.errorCode !== 0) {
                 this.setState({
@@ -81,6 +82,10 @@ export default class DatLich extends Component {
                 })
             }
         });
+    }
+
+    componentDidUpdate() {
+        client.subscribe(this.props.id);
     }
 
     phunSuong = () => {
@@ -118,7 +123,7 @@ export default class DatLich extends Component {
 
         if (this.state.connect === true) {
             const datLich = new Message(JSON.stringify(lichSEND));
-            datLich.destinationName = 'control';
+            datLich.destinationName = this.props.id;
             client.send(datLich);
             ToastAndroid.showWithGravity(
                 'Hoàn thành !',
@@ -453,3 +458,14 @@ const styles = StyleSheet.create({
         borderTopWidth: 2,
     }
 });
+
+
+
+const mapStateToProps = state => {
+    return {
+        id: state.id,
+    }
+}
+
+
+export default connect(mapStateToProps, null)(DatLich);
