@@ -14,7 +14,6 @@ import {
 import { Client, Message } from 'react-native-paho-mqtt';
 import { connect } from 'react-redux';
 import * as act from '../actions/index';
-require('events').EventEmitter.prototype._maxListeners = 0;
 
 export const myStorage = {
     setItem: (key, item) => {
@@ -27,11 +26,11 @@ export const myStorage = {
 };
 
 
-export const client = new Client({ uri: 'ws://solavo.ddns.net:8883/', clientId: "android_" + parseInt(Math.random() * 100, 10), storage: myStorage });
+export const client = new Client({ uri: 'wss://m13.cloudmqtt.com:34250/', clientId: "android_" + parseInt(Math.random() * 100, 10), storage: myStorage });
 var options = {
-    useSSL: false,
-    userName: "sammy",
-    password: "123456789",
+    useSSL: true,
+    userName: "jepjknnb",
+    password: "B9Io8J5H88fP",
 }
 
 

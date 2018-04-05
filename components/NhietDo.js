@@ -28,11 +28,11 @@ export const myStorage = {
     },
 };
 
-export const client = new Client({ uri: 'ws://solavo.ddns.net:8883/', clientId: "android_" + parseInt(Math.random() * 100, 10), storage: myStorage });
+export const client = new Client({ uri: 'wss://m13.cloudmqtt.com:34250/', clientId: "android_" + parseInt(Math.random() * 100, 10), storage: myStorage });
 var options = {
-    useSSL: false,
-    userName: "sammy",
-    password: "123456789",
+    useSSL: true,
+    userName: "jepjknnb",
+    password: "B9Io8J5H88fP",
 }
 
 
@@ -75,7 +75,8 @@ export class NhietDo extends Component {
         client.connect(options).then(() => {
             this.setState({
                 connect: true
-            })
+            });
+            client.subscribe(this.props.id);
             const messcon = new Message(JSON.stringify({ connect: true }));
             messcon.destinationName = this.props.id;
             client.send(messcon);
@@ -94,6 +95,9 @@ export class NhietDo extends Component {
     componentWillReceiveProps() {
         setTimeout(() => {
             client.subscribe(this.props.id);
+            const messcon = new Message(JSON.stringify({ connect: true }));
+            messcon.destinationName = this.props.id;
+            client.send(messcon);
         }, 100)
     }
 
