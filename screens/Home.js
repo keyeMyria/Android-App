@@ -7,7 +7,8 @@ import {
     Button,
     ToastAndroid,
     AsyncStorage,
-    BackAndroid
+    BackAndroid,
+    ScrollView
 } from 'react-native';
 import { Client, Message } from 'react-native-paho-mqtt';
 import NhietDo from '../components/NhietDo';
@@ -31,23 +32,25 @@ export class Home extends Component {
     }
     render() {
         return (
-            <View style={{ flex: 1, flexDirection: 'column' }}>
-                <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
-                    <Text style={{ fontSize: 50, justifyContent: 'center' }}>
-                        SOLAVO
+            <ScrollView style={{ flex: 1 }}>
+                <View style={{ flex: 1, flexDirection: 'column' }}>
+                    <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
+                        <Text style={{ fontSize: 50, justifyContent: 'center' }}>
+                            SOLAVO
                     </Text>
+                    </View>
+                    <NhietDo />
+                    <CaiDat />
+                    <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
+                        <Button
+                            onPress={() => this.onDelete()}
+                            title="Delete"
+                            color="#841584"
+                            accessibilityLabel="Learn more about this purple button"
+                        />
+                    </View>
                 </View>
-                <NhietDo />
-                <CaiDat />
-                <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
-                    <Button
-                        onPress={() => this.onDelete()}
-                        title="Delete"
-                        color="#841584"
-                        accessibilityLabel="Learn more about this purple button"
-                    />
-                </View>
-            </View>
+            </ScrollView>
         );
     }
     onDelete = () => {
