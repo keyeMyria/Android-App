@@ -56,7 +56,15 @@ export class DatLich extends Component {
             gio5: '',
             phut5: '',
             phutChay5: '',
-            allowSync: true
+            allowSync: true,
+            T2: true,
+            T3: true,
+            T4: true,
+            T5: true,
+            T6: true,
+            T7: true,
+            CN: true,
+            colorDate: [true, true, true, true, true, true, true]
         }
     }
 
@@ -118,6 +126,7 @@ export class DatLich extends Component {
             ],
             phunSuong: this.state.phunSuong,
             lamMat: this.state.lamMat,
+            day: [this.state.T2, this.state.T3, this.state.T4, this.state.T5, this.state.T6, this.state.T7, this.state.CN]
         }
 
         if (this.state.connect === true) {
@@ -137,6 +146,7 @@ export class DatLich extends Component {
             }
         }
     }
+
     render() {
         if (this.state.phunSuong === true && this.state.allowSync === true) {
             AsyncStorage.getItem('lps').then(data1 => {
@@ -195,6 +205,15 @@ export class DatLich extends Component {
                 }
             })
         }
+
+        let colorDay = [];
+        colorDay[0] = this.state.colorDate[0] === true ? '#013E0C' : '#8A8A8A';
+        colorDay[1] = this.state.colorDate[1] === true ? '#013E0C' : '#8A8A8A';
+        colorDay[2] = this.state.colorDate[2] === true ? '#013E0C' : '#8A8A8A';
+        colorDay[3] = this.state.colorDate[3] === true ? '#013E0C' : '#8A8A8A';
+        colorDay[4] = this.state.colorDate[4] === true ? '#013E0C' : '#8A8A8A';
+        colorDay[5] = this.state.colorDate[5] === true ? '#013E0C' : '#8A8A8A';
+        colorDay[6] = this.state.colorDate[6] === true ? '#013E0C' : '#8A8A8A';
 
         return (
             <ScrollView style={{ flex: 1, flexDirection: 'column' }}>
@@ -410,6 +429,46 @@ export class DatLich extends Component {
                         </View> : <View></View>
                     }
                     {this.state.connect === true ?
+                        <View style={{ flex: 2, flexDirection: 'row', justifyContent: 'space-between', alignContent: 'center', alignItems: 'center', marginLeft: 15, marginRight: 15, marginBottom: 20 }}>
+                            <TouchableWithoutFeedback onPress={() => this.onTouchDay('T2')}>
+                                <View style={{ width: 40, height: 40, backgroundColor: colorDay[0], borderRadius: 40, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 20, color: 'white', fontWeight: 'bold', textAlign: 'center' }}>2</Text>
+                                </View>
+                            </TouchableWithoutFeedback>
+                            <TouchableWithoutFeedback onPress={() => this.onTouchDay('T3')}>
+                                <View style={{ width: 40, height: 40, backgroundColor: colorDay[1], borderRadius: 40, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 20, color: 'white', fontWeight: 'bold', textAlign: 'center' }}>3</Text>
+                                </View>
+                            </TouchableWithoutFeedback>
+                            <TouchableWithoutFeedback onPress={() => this.onTouchDay('T4')}>
+                                <View style={{ width: 40, height: 40, backgroundColor: colorDay[2], borderRadius: 40, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 20, color: 'white', fontWeight: 'bold', textAlign: 'center' }}>4</Text>
+                                </View>
+                            </TouchableWithoutFeedback>
+                            <TouchableWithoutFeedback onPress={() => this.onTouchDay('T5')}>
+                                <View style={{ width: 40, height: 40, backgroundColor: colorDay[3], borderRadius: 40, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 20, color: 'white', fontWeight: 'bold', textAlign: 'center' }}>5</Text>
+                                </View>
+                            </TouchableWithoutFeedback>
+                            <TouchableWithoutFeedback onPress={() => this.onTouchDay('T6')}>
+                                <View style={{ width: 40, height: 40, backgroundColor: colorDay[4], borderRadius: 40, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 20, color: 'white', fontWeight: 'bold', textAlign: 'center' }}>6</Text>
+                                </View>
+                            </TouchableWithoutFeedback>
+                            <TouchableWithoutFeedback onPress={() => this.onTouchDay('T7')}>
+                                <View style={{ width: 40, height: 40, backgroundColor: colorDay[5], borderRadius: 40, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 20, color: 'white', fontWeight: 'bold', textAlign: 'center' }}>7</Text>
+                                </View>
+                            </TouchableWithoutFeedback>
+                            <TouchableWithoutFeedback onPress={() => this.onTouchDay('CN')}>
+                                <View style={{ width: 40, height: 40, backgroundColor: colorDay[6], borderRadius: 40, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 20, color: 'white', fontWeight: 'bold', textAlign: 'center' }}>CN</Text>
+                                </View>
+                            </TouchableWithoutFeedback>
+                        </View>
+                        : <View></View>
+                    }
+                    {this.state.connect === true ?
                         <View style={{ flex: 2, flexDirection: 'row' }}>
                             <TouchableWithoutFeedback onPress={() => this.datLich()}>
                                 <View style={{
@@ -434,6 +493,55 @@ export class DatLich extends Component {
                 </View >
             </ScrollView>
         );
+    }
+
+    onTouchDay = (day) => {
+        var color = this.state.colorDate;
+        switch (day) {
+            case 'T2':
+                color[0] = !this.state.colorDate[0]
+                this.setState({
+                    colorDate: color
+                })
+                break;
+            case 'T3':
+                color[1] = !this.state.colorDate[1]
+                this.setState({
+                    colorDate: color
+                })
+                break;
+            case 'T4':
+                color[2] = !this.state.colorDate[2]
+                this.setState({
+                    colorDate: color
+                })
+                break;
+            case 'T5':
+                color[3] = !this.state.colorDate[3]
+                this.setState({
+                    colorDate: color
+                })
+                break;
+            case 'T6':
+                color[4] = !this.state.colorDate[4]
+                this.setState({
+                    colorDate: color
+                })
+                break;
+            case 'T7':
+                color[5] = !this.state.colorDate[5]
+                this.setState({
+                    colorDate: color
+                })
+                break;
+            case 'CN':
+                color[6] = !this.state.colorDate[6]
+                this.setState({
+                    colorDate: color
+                })
+                break;
+        }
+        console.log(day);
     }
 }
 
