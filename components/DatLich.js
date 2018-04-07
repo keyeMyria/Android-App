@@ -39,8 +39,10 @@ export class DatLich extends Component {
         super(props);
         this.state = {
             connect: false,
-            phunSuong: false,
-            lamMat: false,
+            TB1: true,
+            TB2: false,
+            TB3: false,
+            TB4: false,
             gio1: '',
             phut1: '',
             phutChay1: '',
@@ -95,12 +97,20 @@ export class DatLich extends Component {
         client.subscribe(this.props.id);
     }
 
-    phunSuong = () => {
-        this.setState({ phunSuong: true, lamMat: false, allowSync: true });
+    TB1 = () => {
+        this.setState({ TB1: true, TB2: false, TB3: false, TB4: false, allowSync: true });
     }
 
-    lamMat = () => {
-        this.setState({ phunSuong: false, lamMat: true, allowSync: true });
+    TB2 = () => {
+        this.setState({ TB1: false, TB2: true, TB3: false, TB4: false, allowSync: true });
+    }
+
+    TB3 = () => {
+        this.setState({ TB1: false, TB2: false, TB3: true, TB4: false, allowSync: true });
+    }
+
+    TB4 = () => {
+        this.setState({ TB1: false, TB2: false, TB3: false, TB4: true, allowSync: true });
     }
 
     datLich = () => {
@@ -112,8 +122,11 @@ export class DatLich extends Component {
                 [this.state.gio4, this.state.phut4, this.state.phutChay4],
                 [this.state.gio5, this.state.phut5, this.state.phutChay5]
             ],
-            phunSuong: this.state.phunSuong,
-            lamMat: this.state.lamMat,
+            TB1: this.state.TB1,
+            TB2: this.state.TB2,
+            TB3: this.state.TB3,
+            TB4: this.state.TB4,
+            day: [this.state.colorDate[0], this.state.colorDate[1], this.state.colorDate[2], this.state.colorDate[3], this.state.colorDate[4], this.state.colorDate[5], this.state.colorDate[6]]
         }
 
         var lichSEND = {
@@ -124,9 +137,11 @@ export class DatLich extends Component {
                 [parseFloat(this.state.gio4), parseFloat(this.state.phut4), parseFloat(this.state.phutChay4)],
                 [parseFloat(this.state.gio5), parseFloat(this.state.phut5), parseFloat(this.state.phutChay5)]
             ],
-            phunSuong: this.state.phunSuong,
-            lamMat: this.state.lamMat,
-            day: [this.state.T2, this.state.T3, this.state.T4, this.state.T5, this.state.T6, this.state.T7, this.state.CN]
+            TB1: this.state.TB1,
+            TB2: this.state.TB2,
+            TB3: this.state.TB3,
+            TB4: this.state.TB4,
+            day: [this.state.colorDate[0], this.state.colorDate[1], this.state.colorDate[2], this.state.colorDate[3], this.state.colorDate[4], this.state.colorDate[5], this.state.colorDate[6]]
         }
 
         if (this.state.connect === true) {
@@ -138,24 +153,32 @@ export class DatLich extends Component {
                 ToastAndroid.SHORT,
                 ToastAndroid.TOP
             );
-            if (this.state.phunSuong === true) {
-                AsyncStorage.setItem('lps', JSON.stringify(lich));
+            if (this.state.TB1 === true) {
+                AsyncStorage.setItem(`${this.props.id}TB1`, JSON.stringify(lich));
             }
-            if (this.state.lamMat === true) {
-                AsyncStorage.setItem('llm', JSON.stringify(lich));
+            if (this.state.TB2 === true) {
+                AsyncStorage.setItem(`${this.props.id}TB2`, JSON.stringify(lich));
+            }
+            if (this.state.TB3 === true) {
+                AsyncStorage.setItem(`${this.props.id}TB3`, JSON.stringify(lich));
+            }
+            if (this.state.TB4 === true) {
+                AsyncStorage.setItem(`${this.props.id}TB4`, JSON.stringify(lich));
             }
         }
     }
 
     render() {
-        if (this.state.phunSuong === true && this.state.allowSync === true) {
-            AsyncStorage.getItem('lps').then(data1 => {
+        if (this.state.TB1 === true && this.state.allowSync === true) {
+            AsyncStorage.getItem(`${this.props.id}TB1`).then(data1 => {
                 if (data1) {
                     let json = JSON.parse(data1);
                     let data = json.lich;
                     this.setState({
-                        phunSuong: true,
-                        lamMat: false,
+                        TB1: true,
+                        TB2: false,
+                        TB3: false,
+                        TB4: false,
                         gio1: data[0][0],
                         phut1: data[0][1],
                         phutChay1: data[0][2],
@@ -171,20 +194,23 @@ export class DatLich extends Component {
                         gio5: data[4][0],
                         phut5: data[4][1],
                         phutChay5: data[4][2],
-                        allowSync: false
+                        allowSync: false,
+                        colorDate: json.day
                     })
                 }
             })
         }
 
-        if (this.state.lamMat === true && this.state.allowSync === true) {
-            AsyncStorage.getItem('llm').then(data1 => {
+        if (this.state.TB2 === true && this.state.allowSync === true) {
+            AsyncStorage.getItem(`${this.props.id}TB2`).then(data1 => {
                 if (data1) {
                     let json = JSON.parse(data1);
                     let data = json.lich;
                     this.setState({
-                        phunSuong: false,
-                        lamMat: true,
+                        TB1: false,
+                        TB2: true,
+                        TB3: false,
+                        TB4: false,
                         gio1: data[0][0],
                         phut1: data[0][1],
                         phutChay1: data[0][2],
@@ -200,7 +226,72 @@ export class DatLich extends Component {
                         gio5: data[4][0],
                         phut5: data[4][1],
                         phutChay5: data[4][2],
-                        allowSync: false
+                        allowSync: false,
+                        colorDate: json.day
+                    })
+                }
+            })
+        }
+
+        if (this.state.TB3 === true && this.state.allowSync === true) {
+            AsyncStorage.getItem(`${this.props.id}TB3`).then(data1 => {
+                if (data1) {
+                    let json = JSON.parse(data1);
+                    let data = json.lich;
+                    this.setState({
+                        TB1: false,
+                        TB2: false,
+                        TB3: true,
+                        TB4: false,
+                        gio1: data[0][0],
+                        phut1: data[0][1],
+                        phutChay1: data[0][2],
+                        gio2: data[1][0],
+                        phut2: data[1][1],
+                        phutChay2: data[1][2],
+                        gio3: data[2][0],
+                        phut3: data[2][1],
+                        phutChay3: data[2][2],
+                        gio4: data[3][0],
+                        phut4: data[3][1],
+                        phutChay4: data[3][2],
+                        gio5: data[4][0],
+                        phut5: data[4][1],
+                        phutChay5: data[4][2],
+                        allowSync: false,
+                        colorDate: json.day
+                    })
+                }
+            })
+        }
+
+        if (this.state.TB4 === true && this.state.allowSync === true) {
+            AsyncStorage.getItem(`${this.props.id}TB4`).then(data1 => {
+                if (data1) {
+                    let json = JSON.parse(data1);
+                    let data = json.lich;
+                    this.setState({
+                        TB1: false,
+                        TB2: false,
+                        TB3: false,
+                        TB4: true,
+                        gio1: data[0][0],
+                        phut1: data[0][1],
+                        phutChay1: data[0][2],
+                        gio2: data[1][0],
+                        phut2: data[1][1],
+                        phutChay2: data[1][2],
+                        gio3: data[2][0],
+                        phut3: data[2][1],
+                        phutChay3: data[2][2],
+                        gio4: data[3][0],
+                        phut4: data[3][1],
+                        phutChay4: data[3][2],
+                        gio5: data[4][0],
+                        phut5: data[4][1],
+                        phutChay5: data[4][2],
+                        allowSync: false,
+                        colorDate: json.day
                     })
                 }
             })
@@ -218,68 +309,136 @@ export class DatLich extends Component {
         return (
             <ScrollView style={{ flex: 1, flexDirection: 'column' }}>
                 <View style={{ flex: 1, flexDirection: 'column' }}>
-                    {this.state.connect === true ?
-                        <View style={{ flex: 2, marginTop: 20 }}>
-                            <TouchableWithoutFeedback onPress={() => this.phunSuong()}>
-                                <View style={{
-                                    flex: 1,
-                                    alignContent: 'center',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    borderColor: '#460259',
-                                    borderStyle: 'solid',
-                                    borderLeftWidth: 5,
-                                    borderBottomWidth: 5,
-                                    borderRightWidth: 5,
-                                    borderTopWidth: 5,
-                                    marginLeft: 50,
-                                    marginRight: 50,
-                                    height: 60,
-                                    backgroundColor: this.state.phunSuong === true ? '#4c063f' : 'white'
-                                }}>
-                                    <Text style={{
-                                        fontSize: 25,
-                                        textAlign: 'center',
+                    <View style={{ flex: 1, flexDirection: 'row' }}>
+                        {this.state.connect === true ?
+                            <View style={{ flex: 2, marginTop: 20 }}>
+                                <TouchableWithoutFeedback onPress={() => this.TB1()}>
+                                    <View style={{
+                                        flex: 1,
+                                        alignContent: 'center',
+                                        alignItems: 'center',
                                         justifyContent: 'center',
-                                        color: this.state.phunSuong === true ? 'white' : '#460259',
-                                        fontWeight: 'bold'
-                                    }}>Phun Sương</Text>
-                                </View>
-                            </TouchableWithoutFeedback>
-                        </View> :
-                        <View style={{ flex: 1, alignContent: 'center', alignItems: 'center', justifyContent: 'center', marginTop: 250 }}>
-                            <Text style={{ fontSize: 30, textAlign: 'center', color: '#A81057' }}>Chưa kết nối tới server</Text>
-                        </View>}
-                    {this.state.connect === true ?
-                        <View style={{ flex: 2, marginTop: 20 }}>
-                            <TouchableWithoutFeedback onPress={() => this.lamMat()}>
-                                <View style={{
-                                    flex: 1,
-                                    alignContent: 'center',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    borderColor: '#840934',
-                                    borderStyle: 'solid',
-                                    borderLeftWidth: 5,
-                                    borderBottomWidth: 5,
-                                    borderRightWidth: 5,
-                                    borderTopWidth: 5,
-                                    marginLeft: 50,
-                                    marginRight: 50,
-                                    height: 60,
-                                    backgroundColor: this.state.lamMat === true ? '#840934' : 'white'
-                                }}>
-                                    <Text style={{
-                                        fontSize: 25,
-                                        textAlign: 'center',
+                                        borderColor: '#460259',
+                                        borderStyle: 'solid',
+                                        borderLeftWidth: 5,
+                                        borderBottomWidth: 5,
+                                        borderRightWidth: 5,
+                                        borderTopWidth: 5,
+                                        marginLeft: 50,
+                                        marginRight: 50,
+                                        height: 60,
+                                        backgroundColor: this.state.TB1 === true ? '#4c063f' : 'white'
+                                    }}>
+                                        <Text style={{
+                                            fontSize: 25,
+                                            textAlign: 'center',
+                                            justifyContent: 'center',
+                                            color: this.state.TB1 === true ? 'white' : '#460259',
+                                            fontWeight: 'bold'
+                                        }}>Thiết bị 1</Text>
+                                    </View>
+                                </TouchableWithoutFeedback>
+                            </View> :
+                            <View style={{ flex: 1, alignContent: 'center', alignItems: 'center', justifyContent: 'center', marginTop: 250 }}>
+                                <Text style={{ fontSize: 30, textAlign: 'center', color: '#A81057' }}>Chưa kết nối tới server</Text>
+                            </View>}
+                        {this.state.connect === true ?
+                            <View style={{ flex: 2, marginTop: 20 }}>
+                                <TouchableWithoutFeedback onPress={() => this.TB2()}>
+                                    <View style={{
+                                        flex: 1,
+                                        alignContent: 'center',
+                                        alignItems: 'center',
                                         justifyContent: 'center',
-                                        color: this.state.lamMat === true ? 'white' : '#840934',
-                                        fontWeight: 'bold'
-                                    }}>Làm mát</Text>
-                                </View>
-                            </TouchableWithoutFeedback>
-                        </View> : <View></View>
-                    }
+                                        borderColor: '#840934',
+                                        borderStyle: 'solid',
+                                        borderLeftWidth: 5,
+                                        borderBottomWidth: 5,
+                                        borderRightWidth: 5,
+                                        borderTopWidth: 5,
+                                        marginLeft: 50,
+                                        marginRight: 50,
+                                        height: 60,
+                                        backgroundColor: this.state.TB2 === true ? '#840934' : 'white'
+                                    }}>
+                                        <Text style={{
+                                            fontSize: 25,
+                                            textAlign: 'center',
+                                            justifyContent: 'center',
+                                            color: this.state.TB2 === true ? 'white' : '#840934',
+                                            fontWeight: 'bold'
+                                        }}>Thiết bị 2</Text>
+                                    </View>
+                                </TouchableWithoutFeedback>
+                            </View> : <View></View>
+                        }
+                    </View>
+                    <View style={{ flex: 1, flexDirection: 'row' }}>
+                        {this.state.connect === true ?
+                            <View style={{ flex: 2, marginTop: 20 }}>
+                                <TouchableWithoutFeedback onPress={() => this.TB3()}>
+                                    <View style={{
+                                        flex: 1,
+                                        alignContent: 'center',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        borderColor: '#460259',
+                                        borderStyle: 'solid',
+                                        borderLeftWidth: 5,
+                                        borderBottomWidth: 5,
+                                        borderRightWidth: 5,
+                                        borderTopWidth: 5,
+                                        marginLeft: 50,
+                                        marginRight: 50,
+                                        height: 60,
+                                        backgroundColor: this.state.TB3 === true ? '#4c063f' : 'white'
+                                    }}>
+                                        <Text style={{
+                                            fontSize: 25,
+                                            textAlign: 'center',
+                                            justifyContent: 'center',
+                                            color: this.state.TB3 === true ? 'white' : '#460259',
+                                            fontWeight: 'bold'
+                                        }}>Thiết bị 3</Text>
+                                    </View>
+                                </TouchableWithoutFeedback>
+                            </View> :
+                            <View style={{ flex: 1, alignContent: 'center', alignItems: 'center', justifyContent: 'center', marginTop: 250 }}>
+                                <Text style={{ fontSize: 30, textAlign: 'center', color: '#A81057' }}>Chưa kết nối tới server</Text>
+                            </View>}
+                        {this.state.connect === true ?
+                            <View style={{ flex: 2, marginTop: 20 }}>
+                                <TouchableWithoutFeedback onPress={() => this.TB4()}>
+                                    <View style={{
+                                        flex: 1,
+                                        alignContent: 'center',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        borderColor: '#840934',
+                                        borderStyle: 'solid',
+                                        borderLeftWidth: 5,
+                                        borderBottomWidth: 5,
+                                        borderRightWidth: 5,
+                                        borderTopWidth: 5,
+                                        marginLeft: 50,
+                                        marginRight: 50,
+                                        height: 60,
+                                        backgroundColor: this.state.TB4 === true ? '#840934' : 'white'
+                                    }}>
+                                        <Text style={{
+                                            fontSize: 25,
+                                            textAlign: 'center',
+                                            justifyContent: 'center',
+                                            color: this.state.TB4 === true ? 'white' : '#840934',
+                                            fontWeight: 'bold'
+                                        }}>Thiết bị 4</Text>
+                                    </View>
+                                </TouchableWithoutFeedback>
+                            </View> : <View></View>
+                        }
+                    </View>
+
+
                     {this.state.connect === true ?
                         <View style={{ flex: 10, flexDirection: 'row', marginTop: 10 }}>
                             <View style={{ flex: 2, flexDirection: 'column', }}>
