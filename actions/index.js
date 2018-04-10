@@ -98,3 +98,10 @@ export const add_name = (name) => {
         });
     }
 }
+
+export const inc_row_calender = (number) => {
+    return {
+        type: Type.INC_ROW_CALENDER,
+        rowCalender: number + 1
+    }
+}

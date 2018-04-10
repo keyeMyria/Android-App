@@ -5,7 +5,8 @@ import {
     Text,
     View,
     Button,
-    ToastAndroid
+    ToastAndroid,
+    TouchableWithoutFeedback
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { connect } from 'react-redux';
@@ -29,11 +30,14 @@ export class AddBar extends Component {
         );
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.getListName();
-        if (this.props.machine[0] !== undefined)
-            this.props.addCurrentID(this.props.machine[0]);
+        setTimeout(() => {
+            if (this.props.machine[0] !== undefined)
+                this.props.addCurrentID(this.props.machine[0]);
+        }, 100)
     }
+
 
     renderDetailMachine = (name, machine) => {
         var result = null;
@@ -43,11 +47,11 @@ export class AddBar extends Component {
                     <Button
                         onPress={() => this.onPress(machine[index])}
                         title={value}
-                        color="#060428"
+                        color={this.props.currentID === machine[index] ? "#1F9E28" : "#0C1261"}
                         accessibilityLabel="Bấm vào để điều khiển thiết bị"
                     />
                 </View>
-            );
+            );  
         })
         return result;
     }

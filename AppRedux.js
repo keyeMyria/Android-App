@@ -15,7 +15,21 @@ require('events').EventEmitter.prototype._maxListeners = 0;
 export const Navigator = TabNavigator({
 	'Trang Chủ': { screen: Home },
 	'Cài đặt': { screen: Setting },
-});
+}, {
+		tabBarOptions: {
+			style: {
+				backgroundColor: '#1F9E28',
+				borderTopWidth: 1,
+				borderTopColor: 'white',
+			},
+			indicatorStyle: {
+				backgroundColor: 'white',
+			},
+			labelStyle: {
+				fontWeight: 'bold'
+			}
+		},
+	});
 
 
 export class AppRedux extends React.Component {
