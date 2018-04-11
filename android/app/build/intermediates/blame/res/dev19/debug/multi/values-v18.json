@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "D:\\project\\Garden\\android\\app\\build\\intermediates\\incremental\\mergeDev19DebugResources\\merged.dir\\values-v18\\values-v18.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 48,
+                    "endOffset": 99
+                },
+                "from": {
+                    "file": "C:\\Users\\huyen\\.android\\build-cache\\7da101a5d6150798f5db4f898bad2f37a57f5445\\output\\res\\values-v18\\values-v18.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 48,
+                        "endOffset": 99
+                    }
+                }
+            }
+        ]
+    }
+]

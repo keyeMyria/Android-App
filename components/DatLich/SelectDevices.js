@@ -11,6 +11,7 @@ import {
     AsyncStorage,
     ScrollView
 } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Client, Message } from 'react-native-paho-mqtt';
 import { connect } from 'react-redux';
 import * as act from '../../actions/index';
@@ -29,194 +30,108 @@ export class SelectDevices extends Component {
         }
     }
 
+    onChangeTB = (TB) => {
+        switch (TB) {
+            case 'TB1':
+                this.setState({ TB1: true, TB2: false, TB3: false, TB4: false })
+                break;
+            case 'TB2':
+                this.setState({ TB1: false, TB2: true, TB3: false, TB4: false })
+                break;
+            case 'TB3':
+                this.setState({ TB1: false, TB2: false, TB3: true, TB4: false })
+                break;
+            case 'TB4':
+                this.setState({ TB1: false, TB2: false, TB3: false, TB4: true })
+                break;
+        }
+    }
+
 
     render() {
+        let { TB1, TB2, TB3, TB4 } = this.state;
         return (
-            [<View style={{ flex: 1, flexDirection: 'row', backgroundColor: 'white' }}>
-                {this.state.connect === true ?
-                    <View style={{ flex: 2, marginTop: 20 }}>
-                        <TouchableWithoutFeedback onPress={() => this.TB('TB1')}>
-                            <View style={{
-                                flex: 1,
-                                alignContent: 'center',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                borderColor: '#460259',
-                                borderStyle: 'solid',
-                                borderLeftWidth: 5,
-                                borderBottomWidth: 5,
-                                borderRightWidth: 5,
-                                borderTopWidth: 5,
-                                marginLeft: 50,
-                                marginRight: 50,
-                                height: 60,
-                                backgroundColor: this.state.TB1 === true ? '#4c063f' : 'white'
-                            }}>
-                                <Text style={{
-                                    fontSize: 25,
-                                    textAlign: 'center',
-                                    justifyContent: 'center',
-                                    color: this.state.TB1 === true ? 'white' : '#460259',
-                                    fontWeight: 'bold'
-                                }}>Thiết bị 1</Text>
-                            </View>
-                        </TouchableWithoutFeedback>
-                    </View> :
-                    <View style={{ flex: 1, alignContent: 'center', alignItems: 'center', justifyContent: 'center', marginTop: 250 }}>
-                        <Text style={{ fontSize: 30, textAlign: 'center', color: '#A81057' }}>Chưa kết nối tới server</Text>
-                    </View>}
-                {this.state.connect === true ?
-                    <View style={{ flex: 2, marginTop: 20 }}>
-                        <TouchableWithoutFeedback onPress={() => this.TB('TB2')}>
-                            <View style={{
-                                flex: 1,
-                                alignContent: 'center',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                borderColor: '#840934',
-                                borderStyle: 'solid',
-                                borderLeftWidth: 5,
-                                borderBottomWidth: 5,
-                                borderRightWidth: 5,
-                                borderTopWidth: 5,
-                                marginLeft: 50,
-                                marginRight: 50,
-                                height: 60,
-                                backgroundColor: this.state.TB2 === true ? '#840934' : 'white'
-                            }}>
-                                <Text style={{
-                                    fontSize: 25,
-                                    textAlign: 'center',
-                                    justifyContent: 'center',
-                                    color: this.state.TB2 === true ? 'white' : '#840934',
-                                    fontWeight: 'bold'
-                                }}>Thiết bị 2</Text>
-                            </View>
-                        </TouchableWithoutFeedback>
-                    </View> : <View></View>
-                }
-            </View>,
-            <View style={{ flex: 1, flexDirection: 'row', backgroundColor: 'white', paddingBottom: 20 }}>
-                {this.state.connect === true ?
-                    <View style={{ flex: 2, marginTop: 20 }}>
-                        <TouchableWithoutFeedback onPress={() => this.TB('TB3')}>
-                            <View style={{
-                                flex: 1,
-                                alignContent: 'center',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                borderColor: '#460259',
-                                borderStyle: 'solid',
-                                borderLeftWidth: 5,
-                                borderBottomWidth: 5,
-                                borderRightWidth: 5,
-                                borderTopWidth: 5,
-                                marginLeft: 50,
-                                marginRight: 50,
-                                height: 60,
-                                backgroundColor: this.state.TB3 === true ? '#4c063f' : 'white'
-                            }}>
-                                <Text style={{
-                                    fontSize: 25,
-                                    textAlign: 'center',
-                                    justifyContent: 'center',
-                                    color: this.state.TB3 === true ? 'white' : '#460259',
-                                    fontWeight: 'bold'
-                                }}>Thiết bị 3</Text>
-                            </View>
-                        </TouchableWithoutFeedback>
-                    </View> :
-                    <View>
-                    </View>}
-                {this.state.connect === true ?
-                    <View style={{ flex: 2, marginTop: 20 }}>
-                        <TouchableWithoutFeedback onPress={() => this.TB('TB4')}>
-                            <View style={{
-                                flex: 1,
-                                alignContent: 'center',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                borderColor: '#840934',
-                                borderStyle: 'solid',
-                                borderLeftWidth: 5,
-                                borderBottomWidth: 5,
-                                borderRightWidth: 5,
-                                borderTopWidth: 5,
-                                marginLeft: 50,
-                                marginRight: 50,
-                                height: 60,
-                                backgroundColor: this.state.TB4 === true ? '#840934' : 'white'
-                            }}>
-                                <Text style={{
-                                    fontSize: 25,
-                                    textAlign: 'center',
-                                    justifyContent: 'center',
-                                    color: this.state.TB4 === true ? 'white' : '#840934',
-                                    fontWeight: 'bold'
-                                }}>Thiết bị 4</Text>
-                            </View>
-                        </TouchableWithoutFeedback>
-                    </View> : <View></View>
-                }
-            </View>]
+            <View style={{ flex: 1, flexDirection: 'column', backgroundColor: 'white' }}>
+                <TouchableWithoutFeedback onPress={() => this.onChangeTB('TB1')}>
+                    <View style={{
+                        flex: 1,
+                        flexDirection: 'row',
+                        backgroundColor: 'white',
+                        borderColor: '#460259',
+                        borderStyle: 'solid',
+                        borderBottomWidth: 1
+                    }}>
+                        <View style={{ flex: 3, justifyContent: 'center', alignContent: 'center' }}>
+                            <MaterialCommunityIcons name="fan" size={60} color={TB1 === true ? "#085007" : "#A2A2A2"} />
+                        </View>
+                        <View style={{ flex: 8, justifyContent: 'center' }}>
+                            <Text style={{ fontSize: TB1 === true ? 27 : 25, textAlign: 'left', fontWeight: 'bold', color: TB1 === true ? "#085007" : "#A2A2A2" }}>Thiết bị 1</Text>
+                        </View>
+                    </View>
+                </TouchableWithoutFeedback>
+
+                <TouchableWithoutFeedback onPress={() => this.onChangeTB('TB2')}>
+                    <View style={{
+                        flex: 1,
+                        flexDirection: 'row',
+                        backgroundColor: 'white',
+                        borderColor: '#460259',
+                        borderStyle: 'solid',
+                        borderBottomWidth: 1
+                    }}>
+                        <View style={{ flex: 3, justifyContent: 'center', alignContent: 'center' }}>
+                            <MaterialCommunityIcons name="fan" size={60} color={TB2 === true ? "#085007" : "#A2A2A2"} />
+                        </View>
+                        <View style={{ flex: 8, justifyContent: 'center' }}>
+                            <Text style={{ fontSize: TB2 === true ? 27 : 25, textAlign: 'left', fontWeight: 'bold', color: TB2 === true ? "#085007" : "#A2A2A2" }}>Thiết bị 2</Text>
+                        </View>
+                    </View>
+                </TouchableWithoutFeedback>
+
+                <TouchableWithoutFeedback onPress={() => this.onChangeTB('TB3')}>
+                    <View style={{
+                        flex: 1,
+                        flexDirection: 'row',
+                        backgroundColor: 'white',
+                        borderColor: '#460259',
+                        borderStyle: 'solid',
+                        borderBottomWidth: 1
+                    }}>
+                        <View style={{ flex: 3, justifyContent: 'center', alignContent: 'center' }}>
+                            <MaterialCommunityIcons name="fan" size={60} color={TB3 === true ? "#085007" : "#A2A2A2"} />
+                        </View>
+                        <View style={{ flex: 8, justifyContent: 'center' }}>
+                            <Text style={{ fontSize: TB3 === true ? 27 : 25, textAlign: 'left', fontWeight: 'bold', color: TB3 === true ? "#085007" : "#A2A2A2" }}>Thiết bị 3</Text>
+                        </View>
+                    </View>
+                </TouchableWithoutFeedback>
+
+                <TouchableWithoutFeedback onPress={() => this.onChangeTB('TB4')}>
+                    <View style={{
+                        flex: 1,
+                        flexDirection: 'row',
+                        backgroundColor: 'white',
+                        borderColor: '#460259',
+                        borderStyle: 'solid',
+                        borderBottomWidth: 1
+                    }}>
+                        <View style={{ flex: 3, justifyContent: 'center', alignContent: 'center' }}>
+                            <MaterialCommunityIcons name="fan" size={60} color={TB4 === true ? "#085007" : "#A2A2A2"} />
+                        </View>
+                        <View style={{ flex: 8, justifyContent: 'center' }}>
+                            <Text style={{ fontSize: TB4 === true ? 27 : 25, textAlign: 'left', fontWeight: 'bold', color: TB4 === true ? "#085007" : "#A2A2A2" }}>Thiết bị 4</Text>
+                        </View>
+                    </View>
+                </TouchableWithoutFeedback>
+
+            </View>
         );
     }
 }
 
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-    borderTable: {
-        flex: 1,
-        justifyContent: 'center',
-        alignContent: 'center',
-        marginTop: 10,
-        borderColor: 'black',
-        borderStyle: 'solid',
-        borderLeftWidth: 1,
-        borderBottomWidth: 2,
-        borderRightWidth: 2,
-        borderTopWidth: 2,
-    },
-    viewWrap: {
-        flex: 1,
-        alignContent: 'center',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderColor: '#460259',
-        borderStyle: 'solid',
-        borderLeftWidth: 5,
-        borderBottomWidth: 5,
-        borderRightWidth: 5,
-        borderTopWidth: 5,
-        marginLeft: 50,
-        marginRight: 50,
-        height: 60,
-    },
-    datLichBTN: {
-        flex: 1,
-        height: 60,
-        justifyContent: 'center',
-        alignContent: 'center',
-        alignItems: 'center',
-        borderColor: '#170559',
-        borderStyle: 'solid',
-        borderLeftWidth: 2,
-        borderBottomWidth: 4,
-        borderRightWidth: 4,
-        borderTopWidth: 4,
-    },
-    datLichTxt: {
-        fontSize: 30,
-        textAlign: 'center',
-        color: '#170559',
-        fontWeight: 'bold'
-    }
+
 });
 
 

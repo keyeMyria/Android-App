@@ -13,6 +13,7 @@ import {
 import { Client, Message } from 'react-native-paho-mqtt';
 import { connect } from 'react-redux';
 import { Ionicons } from '@expo/vector-icons';
+import { Card } from 'native-base';
 
 export const myStorage = {
     setItem: (key, item) => {
@@ -25,11 +26,11 @@ export const myStorage = {
 };
 
 
-export const client = new Client({ uri: 'wss://m13.cloudmqtt.com:34250/', clientId: "android_" + parseInt(Math.random() * 100, 10), storage: myStorage });
+export const client = new Client({ uri: 'ws://solavo.ddns.net:8883/', clientId: "android_" + parseInt(Math.random() * 100, 10), storage: myStorage });
 var options = {
-    useSSL: true,
-    userName: "jepjknnb",
-    password: "B9Io8J5H88fP",
+    useSSL: false,
+    userName: "sammy",
+    password: "123456789",
 }
 
 
@@ -190,7 +191,7 @@ export class CaiDat extends Component {
         return (
             [<View style={styles.containner} key={"row 1"}>
                 {this.state.connect === true ?
-                    [<View style={styles.borderBox} key={"Thiet Bi 1"}>
+                    [<Card style={styles.borderBox1} key={"Thiet Bi 1"}>
                         <View style={styles.View}>
                             <Text style={styles.Text}>
                                 Thiết bị 1
@@ -204,8 +205,8 @@ export class CaiDat extends Component {
                             </TouchableWithoutFeedback>
                         </View>
                         {this.renderTimeTB1()}
-                    </View>,
-                    <View style={styles.borderBox} key={"Thiet Bi 2"}>
+                    </Card>,
+                    <Card style={styles.borderBox2} key={"Thiet Bi 2"}>
                         <View style={styles.View}>
                             <Text style={styles.Text}>
                                 Thiết bị 2
@@ -219,13 +220,13 @@ export class CaiDat extends Component {
                             </TouchableWithoutFeedback>
                         </View>
                         {this.renderTimeTB2()}
-                    </View>] :
+                    </Card>] :
                     <View></View>
                 }
             </View>,
             <View style={styles.containner} key={"row 2"}>
                 {this.state.connect === true ?
-                    [<View style={styles.borderBox} key={"Thiet bi 3"}>
+                    [<Card style={styles.borderBox3} key={"Thiet bi 3"}>
                         <View style={styles.View}>
                             <Text style={styles.Text}>
                                 Thiết bị 3
@@ -239,8 +240,8 @@ export class CaiDat extends Component {
                             </TouchableWithoutFeedback>
                         </View>
                         {this.renderTimeTB3()}
-                    </View>,
-                    <View style={styles.borderBox} key={"Thiet Bi 4"}>
+                    </Card>,
+                    <Card style={styles.borderBox4} key={"Thiet Bi 4"}>
                         <View style={styles.View}>
                             <Text style={styles.Text}>
                                 Thiết bị 4
@@ -254,7 +255,7 @@ export class CaiDat extends Component {
                             </TouchableWithoutFeedback>
                         </View>
                         {this.renderTimeTB4()}
-                    </View>] :
+                    </Card>] :
                     <View></View>
                 }
             </View>]
@@ -411,22 +412,40 @@ export class CaiDat extends Component {
 
 const styles = StyleSheet.create({
     containner: {
-        marginBottom: 20,
+        marginBottom: 10,
         flex: 4,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignContent: 'center',
         alignItems: 'center'
     },
-    borderBox: {
+    borderBox1: {
         marginLeft: 20,
+        marginRight: 10,
+        flex: 1,
+        alignContent: 'center',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    borderBox2: {
+        marginLeft: 10,
         marginRight: 20,
-        borderColor: 'black',
-        borderStyle: 'solid',
-        borderLeftWidth: 2,
-        borderBottomWidth: 2,
-        borderRightWidth: 2,
-        borderTopWidth: 2,
+        flex: 1,
+        alignContent: 'center',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    borderBox3: {
+        marginLeft: 20,
+        marginRight: 10,
+        flex: 1,
+        alignContent: 'center',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    borderBox4: {
+        marginLeft: 10,
+        marginRight: 20,
         flex: 1,
         alignContent: 'center',
         justifyContent: 'center',

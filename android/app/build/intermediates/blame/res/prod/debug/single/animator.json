@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\prod\\debug\\animator\\card_flip_left_out.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\b5b078aa06c632c4af61f5a092b63c146db2d06c\\output\\res\\animator\\card_flip_left_out.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\prod\\debug\\animator\\card_flip_right_in.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\b5b078aa06c632c4af61f5a092b63c146db2d06c\\output\\res\\animator\\card_flip_right_in.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\prod\\debug\\animator\\card_flip_left_in.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\b5b078aa06c632c4af61f5a092b63c146db2d06c\\output\\res\\animator\\card_flip_left_in.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\prod\\debug\\animator\\card_flip_right_out.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\b5b078aa06c632c4af61f5a092b63c146db2d06c\\output\\res\\animator\\card_flip_right_out.xml"
+    }
+]

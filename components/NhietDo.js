@@ -14,7 +14,9 @@ import {
     ToastAndroid
 } from 'react-native';
 import { Client, Message } from 'react-native-paho-mqtt';
+import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
+import { Card } from 'native-base';
 import * as act from '../actions/index';
 require('events').EventEmitter.prototype._maxListeners = 0;
 
@@ -28,11 +30,11 @@ export const myStorage = {
     },
 };
 
-export const client = new Client({ uri: 'wss://m13.cloudmqtt.com:34250/', clientId: "android_" + parseInt(Math.random() * 100, 10), storage: myStorage });
+export const client = new Client({ uri: 'ws://solavo.ddns.net:8883/', clientId: "android_" + parseInt(Math.random() * 100, 10), storage: myStorage });
 var options = {
-    useSSL: true,
-    userName: "jepjknnb",
-    password: "B9Io8J5H88fP",
+    useSSL: false,
+    userName: "sammy",
+    password: "123456789",
 }
 
 
@@ -105,26 +107,73 @@ export class NhietDo extends Component {
     render() {
         console.log(this.props.id);
         return (
-            <View style={{ flex: 2, marginBottom: 50 }}>
-                <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }} key={"Block1"}>
-                    <Text style={{ fontSize: 25 }}>
-                        {this.state.connect === true ? 'Đã kết nối tới server!' : 'Chưa kết nối tới server!'}
-                    </Text>
+            <Card style={{ flex: 2, marginBottom: 10, marginTop: -10, paddingTop: 20, marginLeft: 20, marginRight: 20, paddingBottom: 20 }}>
+                <View style={{
+                    flex: 1,
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    borderColor: '#170559',
+                    borderStyle: 'solid',
+                    borderBottomWidth: 2,
+                    borderBottomColor: this.state.connect === true ? 'green' : 'white',
+                    paddingBottom: 10
+                }} key={"Block1"}>
+                    <View style={{ flex: 1, justifyContent: 'center', alignContent: 'center', alignSelf: 'center', marginLeft: 20 }}>
+                        {this.state.connect === true ? <FontAwesome name="signal" size={50} color="green" /> : <MaterialIcons name="signal-cellular-off" size={50} color="green" />}
+                    </View>
+                    <View style={{ flex: 1, justifyContent: 'center', alignSelf: 'center', marginLeft: 10 }}>
+                        {this.state.connect === true ? <Text style={{ fontSize: 22, fontWeight: 'bold' }}>Tốt</Text> : <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'red' }}>Xấu</Text>}
+                    </View>
+                    <View style={{ flex: 1, justifyContent: 'center', alignSelf: 'center', marginLeft: 10 }}>
+                        {this.state.connect === true ? <Text style={{ fontSize: 22, fontWeight: 'bold' }}>5ms</Text> : <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'red' }}></Text>}
+                    </View>
                 </View>
                 {this.state.connect === true ?
-                    [<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }} key={"Block2"}>
-                        <Text style={{ fontSize: 25 }}>
-                            Nhiệt độ: {this.state.nhietdo}°C
-                    </Text>
-                    </View>,
-                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }} key={"Block3"}>
-                        <Text style={{ fontSize: 25, marginLeft: -30 }}>
-                            Độ ẩm: {this.state.doam}%
-                    </Text>
-                    </View>] :
-                    <View></View>
+                    <View style={{ flex: 1, flexDirection: 'row' }}>
+                        <View style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={{
+                                    fontSize: 60,
+                                    textAlign: 'center',
+                                    color: 'green'
+                                }}>
+                                    {this.state.nhietdo}°C
+                                </Text>
+                            </View>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={{
+                                    fontSize: 22,
+                                    textAlign: 'center',
+                                    fontWeight: 'bold'
+                                }}>
+                                    Nhiệt độ
+                                </Text>
+                            </View>
+                        </View>
+                        <View style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                            <View style={{
+                                flex: 1,
+                                justifyContent: 'center',
+                                alignItems: 'center'
+                            }}>
+                                <Text style={{ fontSize: 60, textAlign: 'center', color: 'green' }}>
+                                    {this.state.doam}%
+                            </Text>
+                            </View>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={{
+                                    fontSize: 22,
+                                    textAlign: 'center',
+                                    fontWeight: 'bold'
+                                }}>
+                                    Độ ẩm
+                                </Text>
+                            </View>
+                        </View>
+                    </View> : <View></View>
                 }
-            </View>
+            </Card>
         );
     }
 }

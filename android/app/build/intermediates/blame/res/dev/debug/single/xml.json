@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\xml\\stub_classic.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\b5b078aa06c632c4af61f5a092b63c146db2d06c\\output\\res\\xml\\stub_classic.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\xml\\stub_material.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\b5b078aa06c632c4af61f5a092b63c146db2d06c\\output\\res\\xml\\stub_material.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\xml\\provider_paths.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\b5b078aa06c632c4af61f5a092b63c146db2d06c\\output\\res\\xml\\provider_paths.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\xml\\global_tracker.xml",
+        "source": "D:\\project\\Garden\\android\\app\\build\\generated\\res\\google-services\\dev\\debug\\xml\\global_tracker.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\xml\\preferences.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\8e14f550181111484fee5e9250868d39aea75ceb\\output\\res\\xml\\preferences.xml"
+    }
+]

@@ -1,15 +1,14 @@
 {
-  "name": "Garden",
-  "displayName": "Garden",
-  "expo": {
+   "expo": {
     "name": "Garden",
+    "version": "1.0.0",
+    "slug": "your-app-slug",
     "sdkVersion": "25.0.0",
-    "description": "Garden",
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.solavo.garden"
     },
     "android": {
       "package": "com.solavo.garden"
     }
-  }
-}
+   }
+ }

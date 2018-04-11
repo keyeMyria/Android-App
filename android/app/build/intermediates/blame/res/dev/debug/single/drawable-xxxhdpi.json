@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\drawable-xxxhdpi\\notification_icon.png",
+        "source": "D:\\project\\Garden\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\notification_icon.png"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\drawable-xxxhdpi\\big_logo_filled.png",
+        "source": "D:\\project\\Garden\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\big_logo_filled.png"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\drawable-xxxhdpi\\big_logo_dark.png",
+        "source": "D:\\project\\Garden\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\big_logo_dark.png"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\drawable-xxxhdpi\\big_logo_dark_filled.png",
+        "source": "D:\\project\\Garden\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\big_logo_dark_filled.png"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\drawable-xxxhdpi\\pin_white.png",
+        "source": "D:\\project\\Garden\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\pin_white.png"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\drawable-xxxhdpi\\shell_notification_icon.png",
+        "source": "D:\\project\\Garden\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\shell_notification_icon.png"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\drawable-xxxhdpi\\ic_refresh_white_36dp.png",
+        "source": "D:\\project\\Garden\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_refresh_white_36dp.png"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\drawable-xxxhdpi\\ic_home_white_36dp.png",
+        "source": "D:\\project\\Garden\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_home_white_36dp.png"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\drawable-xxxhdpi\\pin_white_fade.png",
+        "source": "D:\\project\\Garden\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\pin_white_fade.png"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\drawable-xxxhdpi\\ic_arrow_back_white_36dp.png",
+        "source": "D:\\project\\Garden\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_arrow_back_white_36dp.png"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\drawable-xxxhdpi\\ic_logo_white_32dp.png",
+        "source": "D:\\project\\Garden\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_logo_white_32dp.png"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\drawable-xxxhdpi\\ic_share_white_36dp.png",
+        "source": "D:\\project\\Garden\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_share_white_36dp.png"
+    }
+]

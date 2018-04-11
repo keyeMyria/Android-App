@@ -48,7 +48,7 @@ export class AppRedux extends React.Component {
 				<View style={{ height: 35 }}>
 					<AddBar onPress={this.onPress} />
 				</View>
-				<View style={{ flex: 1 }}>
+				<View style={{ flex: 1, marginTop: -1 }}>
 					{status === 'SLASH' ? <SlashScreen /> : <View></View>}
 					{status === 'SCAN' ? <ScanScreen /> : <View></View>}
 					{status === 'CONTROL' ? <Navigator /> : <View></View>}

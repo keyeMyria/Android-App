@@ -2,20 +2,20 @@ import React, { Component } from 'react';
 import {
     Platform,
     StyleSheet,
-    Text,
     View,
-    Button,
     ToastAndroid,
     AsyncStorage,
     BackAndroid,
     ScrollView
 } from 'react-native';
+import { Button,Text } from 'native-base';
 import { Client, Message } from 'react-native-paho-mqtt';
 import NhietDo from '../components/NhietDo';
 import CaiDat from '../components/CaiDat';
 import AddBar from '../components/AddBar';
+import ConnectStatus from '../components/ConnectStatus';
 import { connect } from 'react-redux';
-import RestartAndroid from 'react-native-restart-android'
+
 
 export class Home extends Component {
     constructor(props) {
@@ -24,30 +24,25 @@ export class Home extends Component {
             connect: false,
         }
     }
-    async componentWillMount() {
-        await Expo.Font.loadAsync({
-            'Roboto': require('native-base/Fonts/Roboto.ttf'),
-            'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf'),
-        });
-    }
+
     render() {
         return (
             <ScrollView style={{ flex: 1 }}>
                 <View style={{ flex: 1, flexDirection: 'column' }}>
-                    <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
-                        <Text style={{ fontSize: 50, justifyContent: 'center' }}>
-                            SOLAVO
-                    </Text>
-                    </View>
                     <NhietDo />
                     <CaiDat />
                     <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
+                    <Button full bordered light success full style={{ width: '100%' }}>
+                        <Text>Xóa thiết bị</Text>
+                    </Button>
+                    {/*
                         <Button
                             onPress={() => this.onDelete()}
                             title="Delete"
                             color="#841584"
                             accessibilityLabel="Learn more about this purple button"
                         />
+                        */}
                     </View>
                 </View>
             </ScrollView>

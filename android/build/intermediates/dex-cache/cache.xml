@@ -2,193 +2,1129 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="D:\project\Garden\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\com.facebook.soloader-soloader-0.1.0_572d45b1b70e76712b0b1c0836081b996c59b35d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\project\Garden\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1_03e2335a3d82520437ab0bd506c4ce3eed412cc4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\project\Garden\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.3.0_77e3ecb62158c02965da697d7f3ddcd47c7f1e31.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\project\Garden\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.52.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="af61eb11ffb4296cab0c93218248a3dfcec0a84c">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.52.0_44ed58d20900c610d8222cd862840b1c58518cfb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\project\Garden\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_3c828a473f434f079a4afdf3718060be641dfcfb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_610be9247e3d44e51c85b621d2033de03aa8fae1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\project\Garden\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_d4e9ac83fed7586b6cac1cd44611a24b2e3295f3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\project\Garden\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.0.1_59b71db19b4d0048a3c0468442abb3719ffde799.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.facebook.fbui.textlayoutbuilder\staticlayout-proxy\1.0\f162442a19fff13995fbd51ba414d9ee05579080\staticlayout-proxy-1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0_eecf26e6e2e8670ad2736796963ec59109714a34.jar" />
-    </item>
-    <item
-        is-multidex="false"
+        is-multidex="true"
         jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
+        revision="26.0.1"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_6aa2c5ded3aaa588b4940084393e64372d4d21de.jar" />
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\bolts-tasks-1.4.0_6aa2c5ded3aaa588b4940084393e64372d4d21de\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\23.0.1\1fce89a6428c51467090d7f424e4c9c3dbd55f7e\support-annotations-23.0.1.jar"
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\9fb31e53469e6477ba249b2cd01476b1f361c469\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1_f691cc220b4ebdd5aa777f3921a6f2a26b503f5a.jar" />
+        revision="26.0.1"
+        sha1="287f4dec8dc2d40a238b12562b437438499cd2fb">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_77c92ca332f9578cdb22c6a6c90e034f274fde42\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\f52ac90a5c95f0ee93a0c6546a6c8887f09ddb51\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\okio-1.13.0_7e439dda7ddc16346a5af7957aa4ad5a46df1b8e.jar" />
+        revision="26.0.1"
+        sha1="b346a5d3fc5d6d1d36c6262c8cc865b76df9f40c">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_d858cef85473c4c036d7f033897f89b32f3d0ed8\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="D:\project\Garden\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.52.0\jars\libs\infer-annotations-4.0.jar"
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\08ba7e8a4f86c88e8d9fc97a574bbea06047ff70\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_b345b36ef3ef3c2cc421f66e722610aa25ae2d18.jar" />
+        revision="26.0.1"
+        sha1="363a20f1d25336e827dd24020f2ecdc42d62638f">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_8598ee73b47e3f2d9adb729e9f3120cebc96235a\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="D:\project\Garden\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.3.0\jars\classes.jar"
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\727f579e0f13c95c11ebbfe1a13b160c969773db\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.3.0_b851bb2c49ecd1d058a3b56a8e2c549afa7be341.jar" />
+        revision="26.0.1"
+        sha1="a5db9a2dd46d84285ef737f65030b74b6e8ee2a4">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_bc01f3d2b6b0a83edc1a1979ee6ebcfad3f62700\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.6.0\69edde9fc4b01c9fd51d25b83428837478c27254\okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\okhttp-3.6.0_baeae9d9673d7d699bf5aee368313f0b7ccd48a5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\project\Garden\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.3.0_49c8189eb3c2e63ac45d51f0e5228b0f0a0196cc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\project\Garden\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.3.0_ad80b6d71b28534a43369d492f1f07d6ce6db1fb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.6.0\3f9b16b774f2c36cfd86dd2053d0b3059531dacc\okhttp-urlconnection-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-3.6.0_039ac10a2a95c55a988463a99b9ae3ab157350cd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\project\Garden\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.0.1_c9db100d886f477e1a589bc13f407f9322cd592b.jar" />
-    </item>
-    <item
-        is-multidex="false"
+        is-multidex="true"
         jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
+        revision="26.0.1"
         sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_ffb9411dec6f458225c78f1c0cf7630c5058a6bf.jar" />
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\jsr305-3.0.0_ffb9411dec6f458225c78f1c0cf7630c5058a6bf\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="D:\project\Garden\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.3.0\jars\classes.jar"
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\7a6ebf5832cdad37f169e3fb3e66244e6c99f660\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
-        <dex dex="D:\project\Garden\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.3.0_279f847058e731db6bddf13aaec41f91484a4641.jar" />
+        revision="26.0.1"
+        sha1="6a2f9209ff0d33539df6866d019181ecd1ecd047">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_471d60da28eff2df2921f825ca7efb6cf2a0573d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\d30efa1eb7327673e9487146ab5421311a2bafff\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2482bfd874e8b3927f4141105674ad392ff83698">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_5bde9ddda4d3dfa4764daf1492be7944bc4eec3a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\26.0.1\e1bb32b12b25e2f78e6786059ca7ea878f8345e0\support-annotations-26.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e1bb32b12b25e2f78e6786059ca7ea878f8345e0">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\support-annotations-26.0.1_6bc33318c946ab1c2fa76de6a63ad07295cb063d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.madgag.spongycastle\prov\1.53.0.0\72c4892e05c7563fbab0c4ada0187cd879113389\prov-1.53.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="72c4892e05c7563fbab0c4ada0187cd879113389">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\prov-1.53.0.0_c77ed526bb40af8c48319eef9f85e08cdac565fc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\b5b078aa06c632c4af61f5a092b63c146db2d06c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="765f07d2233e2e7f1f77fbae57361781a5a9c406">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_ed349570c3788f47f03b1c228c90f6a4fc6c5777\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\ee69cd458cd1e70ad84a9dbe0ffa3745d218f789\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d095503f29a8dedc55b9326ed97a5902a1527ab9">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_ebb69284e9372a91e2084841151624df6a14ec41\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\5284f270e4856bd7d18e3739f36426b3e4a8faed\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="16afe57c1d7f8165d107c7806ce7b0c71de87159">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_bb5f2485db3639c378f1a1bd1bad56cb036329ac\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\7da101a5d6150798f5db4f898bad2f37a57f5445\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="681eeeaec5300e5257ad9bf889c3859ba3833d5a">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_a5b1aab51d477fd3d30fcd27b152abb4bb6fcd9b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\920d6d978d8c4e639ad661a53dfad7dcc661d383\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_241d245523944a3736e97bc7a23aae48bdf6fa55\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\c17b51e5e6d7a946f8525df055bbd49d999750d6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_47c97c6c682b4543b566c6f32f9e3563f2872ce5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\086ad0d58b56aa35e39ec3cbd53828824c150269\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_ec80f9fdd44af2e6b0ec12d4a81d2b01b0dd53ae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\6c95fedd800a85ba9afe1c912741b1d7f41e7217\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0d394688dd7030b83dea8eed3fa483410c24afe0">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_b4ba530970bee77f9a3db3ee26e1e96690bfe541\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\8e14f550181111484fee5e9250868d39aea75ceb\output\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\infer-annotations-4.0_e9bd139dac0f9870f5d8ab8c8b5417d01b90015f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\ee472c3182ba8812a30fb683400b10615d55b4cf\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_e18ab706d5cadd744129b849c32e8e5e1e833219\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\35837a663c8fab432e8d1851f534531e3e45fdfb\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e7424f816f538c2acfba6169b25e297ea22afbd8">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_03b1aeb51bb7589e45e2b81491073ef77484fd76\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\c073fd0536c834557b620355a5372defcc2208db\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c97dc8446f6a46da5620f40b3737e162d53c40c2">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_7ddb83011e8bb956a6d7379e4000d77c15ae7f9b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\01eaa0d9c8a5582688ffec84d8b85e7d02cb9d37\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="cac4539de2fbfcb1c4c44c55166f0332b92d34b7">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_7952cfb760a88fa982f27835baed69e8c762e210\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\9effe4e47d8f5331361d6c0199eec45cfe5f0f46\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_263522f9ecf47ff6dd6771fd9c3f8c4033f2b61c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\eb6b5d5c387d99dde58dbce305b697922de64027\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9af3b9b8114e685291aa00e6572b0a9131244956">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_723e2f6ad2808b28f5e1c597c87ad58ba521876b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\d3be7da94ec263735e2db3c99f958e3930ccd640\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="03530f261b6f66dbcae414f12c732bd943f5ba53">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_7b459e82aebb49e9a6e142b42b9b8b28008ee7f2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\de.greenrobot\eventbus\2.4.0\ddd166d01b3158d1c00576d29f7ed15c030df719\eventbus-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ddd166d01b3158d1c00576d29f7ed15c030df719">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\eventbus-2.4.0_5cae41ab2e7d1508acc232b09dd5ab6271a2cc85\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\002cf2ca7889ed5b19d2bb9fd3710c68ac5ecd47\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_880b3b3ddbc4b8815a42ef5bd0be59c3188e7650\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.facebook.device.yearclass\yearclass\1.0.1\adfc67ed7e13d1648f20c2a5d6cb757ce43d9c22\yearclass-1.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="adfc67ed7e13d1648f20c2a5d6cb757ce43d9c22">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\yearclass-1.0.1_a7d6330a64399c4dd03f7944e0d7b0fb128227ee\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\335790ee826da084bde57dd246974bd0d351a78a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_67fa60d6c0838aa469f32f59a8f7be9bd2768a16\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.2.3\1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14\jackson-core-2.2.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\jackson-core-2.2.3_14639ddf7cceb274c446eca2dcac574de2f2c32a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\831b77fa22cac9d2a3d4af0c5a063306bb4c57ec\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ffbd3e8e40ef62a454f4c3990aa70bbda3ffa596">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_e2b0e3654f3d9fb9b0d2566d0a555e10559c4707\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\1.3.2\b6dde38349ba9bb5e6ea6320531eae969985dae5\commons-io-1.3.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b6dde38349ba9bb5e6ea6320531eae969985dae5">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\commons-io-1.3.2_7be70f747a94b395ff4496ad5ba40243fa59284a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.facebook.fbui.textlayoutbuilder\staticlayout-proxy\1.0\f162442a19fff13995fbd51ba414d9ee05579080\staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\staticlayout-proxy-1.0_eecf26e6e2e8670ad2736796963ec59109714a34\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\2437293c069efeb906042bda8a6e0d3fe11fe53e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4a88eaa7f9a31907def9a7968367475bdf5170be">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_ea809380b3ad1c62d61af4e0f6459563305caf98\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\9417919748d32d5d23a33ecb1a630cb75860669b\output\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="82231c00c16c59ee23a508bec9fc6bc3e60c96b2">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\infer-annotations-4.0_4d0040ade95cf5f9d7d418bee5df7b4e19bb1c85\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\68a34807f1e79e545f5e22ef283a2726a38c257b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6b6f292b8b951dcf2ecf2b20853e3eabc7d65c48">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_2edcdabf746ff4e9ffeb71d57e1cb62c7a173720\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\okio-1.9.0_f52e0ca2564d3051c35266eaeb66322920d66458\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\a5c7bc2cacaf8081020f37c1a825f015787de3a3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_9f9afaef8c8555c509b2c8ca2bb31de477208e19\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\31c054e977f8d56a5b4367efab94b11eb16431e1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="611605b6b640c1558f9bdea41de8ff837ab68ca8">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_ec9cd732e6998bbe31b455e89fc23721d7cbea96\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\44f21476d7a3b15569faa07a51894104ef769e1b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a4590fa7eadce322ca893129fdc999074e1aa5bf">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_9e75bb440e382c9c8b8ee4693997fd3f3efcbfaa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\2ca9b5ee996cfa8d83da0bfeab63e1fc64cb6bf8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ec224ad624f39212bacaf5903d989fe066166e7a">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_1532cdf4d808c0124a81c111aab671f18e8cb737\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\butterknife-7.0.1_762f1f0aec5b43a8baff73432ae4bcb63e313529\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\8a949dbb3b79da440f8c414900015e40b1941bc4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a30aea7df545072ad3c06f56b2efc13e67222140">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_e72183853676c2f2c12661df3ea10ed87142849f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho\1.3.1\2c4076b466a0eb4d6ddf5721edd35cd1adc1f317\stetho-1.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2c4076b466a0eb4d6ddf5721edd35cd1adc1f317">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\stetho-1.3.1_09968ac289218596bd4017761c3accbb0bcb1b2f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\0ea919e6d96a02ae38a252f82864a383d25b3efc\output\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7a30a80d40b875fec941cafdceaf514b74ca6d76">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\infer-annotations-4.0_1ace9fa510a38c7813966e0b772524517a9f27d8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\168d6d0b753ce3a57396662dc936ecff8eadf931\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9ff04cc3470178a44512624036751a803418c2ca">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_fd45c7f0ceb7ecec7bc77b977389d3d958fbba0b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.3.0\73c49077166faa4c3c0059c5f583d1d7bd1475fe\core-3.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\core-3.3.0_2056dae296064a2d2ff23c26dfd18fd7425aa5f5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\b21536fbe32eefc65928b7b6deb787203ae6fb13\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="71af915b7f4f7ec0b5f768b365145bb6a5cb9a66">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_fa1dc678b89f379be2b330f06f59fb2199b9041b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\85029bdfb02d724a70a49174d3dd72770b7f6aae\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="53dc9d74b0ac22d201549cd806780597d9679e9a">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_6cb841e11b8e7729ec54bb2d7859b619f42e0e53\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\1220cc0db2b3674e77a34bb7cd60258d672b0ab0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a1ed98e01bd58976d80c062fd0ea2968a1ff68a1">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_87efd5e57a456e6c152fde5c862c98639f2ae08a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\be940df7e3e5da6672ab09bbf674545b7f1657f1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="13469de5eef4b3c0488c0e4963fef197fc745f8a">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_fafcb9a4065488cef2de872b43e2af16c1e92f24\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\javax.inject-1_610be9247e3d44e51c85b621d2033de03aa8fae1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\7aea024110096c1caa66be554ed5d1e8e8a0e618\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="906fdd57c143ec9adc27a76a697fed1c0cfd6348">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_e2e1951875ecb2e06215d1998021fadca0d4be2e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\picasso-2.5.2_8a9a4e9bde5a3b7efadb99b9be02fadf0f1682a7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\1df9cdfcabbf0567380ef9613a7b91bf09557e5c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="50e35ae101a679c4c8ef3dda075b1df9d5d947d9">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_c48220808d060ef2591f8f45ae6d8238afe57c67\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.raizlabs.android\DBFlow-Core\2.2.1\e07bfc8e2041edf27469bd94e08bc19f52f4dee7\DBFlow-Core-2.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e07bfc8e2041edf27469bd94e08bc19f52f4dee7">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\DBFlow-Core-2.2.1_98ead390a739fc0ac564e3b4d2815e924010e803\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\37bbffa37911662d519e471ed201e523a40ed4be\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="adfb92acadeeff1086115fff6b318e95df8b2b29">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_bdeea782211751906ace56c2b2e54a0f2fd6ab12\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\574d80e27f0f09ccb16a3ffe5cbb93b1c2276d56\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9111e38999fee0b16a1ccd057b779f5b08f330e2">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_65d75fda2f4528116f0f91393be8c49532871aed\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\project\Garden\android\maven\expolib_v1\com\squareup\okhttp3\okhttp\3.6.0\okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="565de69ddf97fffe074cba6cb0512520cdce4394">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\okhttp-3.6.0_517f039ca43a3f9095ffe7cc1de7bc80aba9e0ce\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\01eaa0d9c8a5582688ffec84d8b85e7d02cb9d37\output\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6eb79bde4cf6bbb7573bcf7dfbaf8a313f57612e">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\infer-annotations-4.0_8bc0e69c8d22894d29a0e631e557b40b9b85ee45\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\5521266b86304b905565a0f7f034979c8bc752bb\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ffde64dbb0fc07c8b9735c6c42a06a36be15ed13">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_db2aff48545f8e36761f86813eef19f49c277d6c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\9417919748d32d5d23a33ecb1a630cb75860669b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="418dca1ee8bac0cc2f78f8f34b594c4d89eec057">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_cc40eb3dc58f60ac240cb6ac5884646a84c3666f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\286badda8d22980f1b9aef1fe7104bf741e3e193\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="cef85cfc7df40e29fbea58844dd4c1e7d0b15542">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_9376e1e5fe9d68816ed10c218bc331626ebca0b4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\7b98a5cec1c522c528d5638bdcd085f299b36256\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="22c673e65215e0764add61e3102946de895439e4">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_701b3cd89d9532cca859d669c9d7f0a739a19758\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\b4935cbb252d0ac6dc4b031f0dd75e1f50789113\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="af69623378285932372eb7b3b8ff0ef66fa42b93">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_853c8a4b9f5aa0ad34288d8c8f5724df3b1770cf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\a3cba899d964812897f8577f976da744753da60f\output\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="edaed5c051302ba960315d8e3161935f3df40f65">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\infer-annotations-4.0_29755eb3dec5a8ca977d5dc930b3a4948fada471\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\477fb823dd0e05ecb4a3416145f988e20a7f2a75\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_ef63e78278ee5e226b1633945c19a5823af23dc2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\389503857bc8f21eac046a4f1686d7b129fcc02e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="dc83ab7a5ce1e0296cf18a52a6edbcfef815e6cf">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_7e56948a4f5066ce2b08241e996e9428b945d780\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\1c80f961d65556667d836d8c681cba98fa9186fd\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e6172a6e0872c156ae82fe8b51d82b2daed424aa">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_94122393cbfe718280e178f7ca7396ea4615fe9a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\f569db7ef5be09c14b6d18035afe59d54e027850\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a34a28ae586a32e1a33eeb63378732b473cad2be">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_2afd1d258f15ed1bcfbee92952352e3be92145ff\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\31f4c19ada3bdaa670fec864772f3fb07829a751\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9dae58326f6f6a515022468cce56dd04ec3b9fdb">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_b3f21d7efb5f9ee72a0f55ecd266e28b3bbaa2f8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\7c5e6bdf560ad4394c3e442fbcffa592d8a277ee\output\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ea01f90e60978bc6871543cd76136a97a19450b5">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\infer-annotations-4.0_23f7b48f9e50e142b7795f39db27ff3f41e42520\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\8759aa8d07851d4e26a1975b9c65a9be4dce1af9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_b9ba3d44c633f1f44bd19fad07ffa7c1d6dbf90b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\commons-cli\commons-cli\1.2\2bf96b7aa8b611c177d329452af1dc933e14501c\commons-cli-1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2bf96b7aa8b611c177d329452af1dc933e14501c">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\commons-cli-1.2_58bf97ae78856d4d4de919ee03c2a901f21159fe\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\6da57a464e02fad6e845eb18143d971cf5bf67ea\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="53e8932b1ac8c7dfc35cfeda1f9efbc9822ceaf3">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_aa4e8e10ebf879eda48200a3b7a19313bf819047\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Android\Android Studio\gradle\m2repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4b95f4897fa13f2cd904aee711aeafc0c5295cd8">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\commons-codec-1.10_5e9053d5c3e6aa78e211e449f043188153868d69\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\d187ce1a6dda6201b088979832078bf95ef09c30\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="5b65ec1ebc84af3baecfd28954c9e7ff01b937a8">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_721f6dba047913fa1de5fabee0b0bc68a08cad15\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\6d5f71cfee4e01b3dab1c4004394021e35c772d0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e9b2cfdfd59b03643f1e240668275378b96615a8">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_41fcbafdf1038ab48257f56f58e4ff6786f4a0cd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\project\Garden\android\maven\expolib_v1\com\squareup\okhttp3\okhttp-urlconnection\3.6.0\okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ae77d4921dcf287b3776baabfbca09b55616ab13">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\okhttp-urlconnection-3.6.0_45ced4254c2049bca79b4599b3847596a98cdf07\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\a3d3388269ec4bd0cee271c124744c483343e9d2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="dae2154348a4c38a18e8d1042cf445faea4647d0">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_70b4176eb48049a600c711564a6d538a8aff0891\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\56a5e1691e34af1193b9d28f31ec81d132bc7fd5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b8b26b28aae0ba8e2db55ad9fe0ebc770530c5ef">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_8beaa096341815387f1bfb239e7fe6bdde448604\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\0ea919e6d96a02ae38a252f82864a383d25b3efc\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a774607cf90ca991586347daa59ed0de0ad9cb49">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_bea69281bc2561bff55e556acb2f3ce6807e7ffc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\62d2f1af4e5a62b525732f0b0b88ec603f2998ef\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_98c2a349e0272b29371e5c8781eb401c0aff145c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\1457c23f4fb7507713bb02bcd3a702286496de34\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a7a04d6b7c01e569a285fa627cf64f5b05295906">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_304cdc13090c159e848124cb312b16ac14f647de\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\a2052ff0d6e2be1be1258763843188f4b1b0cb41\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c83a644dfc8545d77ed076721762fc4eb4092d81">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_c11facb1de3b3691c631333228821bc75d2f25b3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\9e6b62144fed74a188d4721af2aa4acdd75fe97d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ca851be26ff89f5b32cc222cee98139fb3fac830">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_405cdaa29fc3a80048f4f8db96cb77b300f9bb10\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho-okhttp3\1.3.1\c596b3b33b5a92107bb70544bb5ee35f597bc6d8\stetho-okhttp3-1.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c596b3b33b5a92107bb70544bb5ee35f597bc6d8">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\stetho-okhttp3-1.3.1_756cb731e747bc8b8cdc4c89e204cb2f73845606\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\a03059e93c04040460876b8fecef96f5ad591fda\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="82ea5a937ab84229fbd2f3fc8cf2a72cbdf0ee0f">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_05cf76f46472e3538790da0a3b621e95cc0d72ba\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\2ea730727c1dc5f9bed4663df069cd90a3d1597a\output\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f9558f8bf566536221101e576b5c398787cfcbc3">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\infer-annotations-4.0_1fa3894219f7f5c165084e743c810d10cf002657\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\e68026b958ff6c79325550ffdf2aff2a20a5345c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="190a642ba16d1421296a4d794606279b80039c59">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_a299a6c667367c26851f9b0faf7b9ec0c33d6ab8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\8e208be00bdb10d5e3a80df3f682f47e1a7206fd\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="10c32fcf3d0acc4b208fc39f8d2e16b69ef8bd3b">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_2392b0f497949b5dc815f966b23567a3cb69e961\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\6d78e177557bb8d15806350aa6ed6750d52b6a40\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ad5bb101ced4d3939225c9b57e5a3d81547c1fbb">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_412eb29687f085c9ba50d8be328cbc589381f3fb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\567444234d9201bfffb75ec97aac2e20d76ece12\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_7bb8e398891a90f7f64eb7127a20c9c74169a922\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\cbc90e5400f50253a73e2225ea19353648c49f0a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f2d240dd085626f03f759c41d628a0c8b63e491f">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_0cfc704892f8a9549ca248bacaa523bd34c6cd34\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\2ea730727c1dc5f9bed4663df069cd90a3d1597a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="68d8ffe33fc5c2feb623b2e216dfc180e7540cd5">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_3364b5b0822eae650392be8a4345a85e3559ddbd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\8aa0acf8abc88d780da70fcb62a0be67b3c49490\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="131115ec18ae3951c1584c543de8baa9ac20012a">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_26aaebfc3ddddf8edc2e191d947a855966aa07c8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\db8c9a3be35eb0380ce0b50e69e4c2031a1d9cf1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_10a478122ca8c0a3bf00ab32344e7b6d83973526\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\78328443c9edf50d369d46d0be474e63d3a23088\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="910c013c511f752c4bbe24c5f492f669f4a3ccc0">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_23a1e12eff6afaec8a15189fe92390413123b39b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\13e4598144a83696f37ac5c2373653748fa0b796\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_1f1fa268adad5de63553649412c1e7d48b085400\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\71d2078de4ea1ad0e2fe8bb64d8b22a9f28a7381\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ab6e491b5d7bda2f47991a30f6bfe9a8b134ff8b">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_7d6bc20bf803671c28f2fcc3bf45fa74ac6519d1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\7c5e6bdf560ad4394c3e442fbcffa592d8a277ee\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2f1cc63c85dfeb86263311713a0810d23112495e">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_ed2922817b741fa8903c80a167f94f2844d452d2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\e6b04ae4e210f41a0bbadc712bef6657080544c0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="42a37372fca7123a593202ba76a7f98fbd691f05">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_413562c3cbf100a2ccdb7424d8b243a4114b32fd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\0e77efc8260c09c924ba8c96e8894a37a2b87614\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c9ef45dcbd082cd63aac09a5e2cd443adb5df837">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_332e0740913be4569a3263f1f5931233f994c84c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\okhttp-3.4.1_99f6261ddc3e7ad7b593cf9eba79297af57bdb92\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\294ef5d4df34ad6bb2bb433140e2c60dda98ec10\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a7bf36963372211d8b9e000939020b1c3242234e">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_8fc4f77b872b881e50e9611d1d9362bed441c9b1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.nostra13.universalimageloader\universal-image-loader\1.9.5\442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375\universal-image-loader-1.9.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\universal-image-loader-1.9.5_7b26c97b87c4b0a0dbe73d34e5e92c8bd602c777\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\21556b2b95f91a3cfd58b6b957ccba757b217676\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fa112f9589a72edd6c8458764cd65e80a39e6d8c">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_33fdf5a0ee2847fab848d227b8d97c7d52ee3552\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\project\Garden\android\maven\expolib_v1\com\squareup\okio\okio\1.13.0\okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="89890cffce351fec7caf3fdfd4351c7f4b4769b4">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\okio-1.13.0_10d486394dc819b576ae01f83280680451755f27\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\38f545bf4108ee98108ad8bcea3e4931a9691a07\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_8aab6c431ec032046e43ef7f67d2dca13f3c101c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\ae94fc170c5799b6a925266d8ae807230290f5bf\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="083e7bc5a9d9404b49b8f34e5091532361fa28e6">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_82237db4b882b829b5950e1aee14e76c895cf94a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\a3cba899d964812897f8577f976da744753da60f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="47803d3db7213b155bf0a1876ba920d29000abaa">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_68d0375564799d1fba7f1743cf965c5811de2efd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.amplitude\android-sdk\2.9.2\5ff2f760c3bcad9d4e60f1f84aa695321184ebc0\android-sdk-2.9.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="5ff2f760c3bcad9d4e60f1f84aa695321184ebc0">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\android-sdk-2.9.2_d758545517d042872c32ea054c948ed714942161\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\50fc4b10ff9a2b0636b2a037a35b88b043bacb43\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="dff4d8f88fe2c0e57306e6981fd9b90caeead7e3">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_ab0209c14f5670a6fb19e695f5b11dc046febfa5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.madgag.spongycastle\core\1.53.0.0\619f704791db186304325bd129b2e7ec34f77438\core-1.53.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="619f704791db186304325bd129b2e7ec34f77438">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\core-1.53.0.0_f6f5eebd20cb18848d0b59fccfe10e6175c4ef41\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\515eab718b11a9553c6c39f32010bd7866347914\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ee5304fd374e0b4ebf6b42d4037fbfb2c5336511">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_00995e3fbe07100540a4c9a9d79d33ef469b26b0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\1c80f961d65556667d836d8c681cba98fa9186fd\output\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="83d6e98f2b48f3cf1ec0e7c2b3bf2b3d4618f680">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\infer-annotations-4.0_bab23813511a493c226d1792def8d75bf7b13f7c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\1fcdcf346d5c73c975b8a00c0dc5ade5d6ead004\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="79b01f1eace6ce22c6ffd67000bd6b5c5d2477a9">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_a1b2b582c2fb256cbbe0cee6bc04f87f60244b6f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.segment.analytics.android\analytics\4.3.0\88ab91d4641af4bed4b39aa3fd7cf487b66b9d5e\analytics-4.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="88ab91d4641af4bed4b39aa3fd7cf487b66b9d5e">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\analytics-4.3.0_4edc9247730162fb5211603d1ec1e5b5474ec6c1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\e0d9367e02a243f097a39a2fc7ab415c01738c06\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_d23af6bca7ae1b92a14fbc12e988435e58a39f15\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\bb04fac39f397bfab0a1ccf1639fbc1983680a2f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="85299bf1924dde0200109a58033c5ef84ecb6991">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_6195b9f5e79406fe19f1d7eed20c2c3746d9afe8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.4.1\63994437f62bc861bc20c605d12962f7246116d1\okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\okhttp-urlconnection-3.4.1_dca895c37b96077931a1dc66a2ddb3f48e6edba6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.android\build-cache\8e14f550181111484fee5e9250868d39aea75ceb\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="20be4fc45af5a418fbbfb8d1040020b64b187885">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\classes_1a3b5e43cb803b47bba7b71e453786da8d1812ed\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\bolts-applinks-1.4.0_82f29350b0f6cf734c21c0ce3031836dd9ecb195\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\huyen\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-ws\3.4.1\8ace66ef7002d98f633377c9e67daeeb196d8c3b\okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="D:\project\Garden\android\app\build\intermediates\transforms\dex\dev19\debug\folders\1000\10\okhttp-ws-3.4.1_ce6c402de50a4f09e0fc04e2fe4d03792cf66db4\classes.dex" />
     </item>
 
 </items>

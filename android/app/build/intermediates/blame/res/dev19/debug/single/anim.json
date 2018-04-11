@@ -1,0 +1,98 @@
+[
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\7da101a5d6150798f5db4f898bad2f37a57f5445\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\slide_up.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\01eaa0d9c8a5582688ffec84d8b85e7d02cb9d37\\output\\res\\anim\\slide_up.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\7da101a5d6150798f5db4f898bad2f37a57f5445\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\7da101a5d6150798f5db4f898bad2f37a57f5445\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\catalyst_push_up_in.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\8e14f550181111484fee5e9250868d39aea75ceb\\output\\res\\anim\\catalyst_push_up_in.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\catalyst_push_up_out.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\8e14f550181111484fee5e9250868d39aea75ceb\\output\\res\\anim\\catalyst_push_up_out.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\catalyst_fade_in.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\8e14f550181111484fee5e9250868d39aea75ceb\\output\\res\\anim\\catalyst_fade_in.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\7da101a5d6150798f5db4f898bad2f37a57f5445\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\7da101a5d6150798f5db4f898bad2f37a57f5445\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\7da101a5d6150798f5db4f898bad2f37a57f5445\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\7da101a5d6150798f5db4f898bad2f37a57f5445\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\fade_in.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\01eaa0d9c8a5582688ffec84d8b85e7d02cb9d37\\output\\res\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\7da101a5d6150798f5db4f898bad2f37a57f5445\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\catalyst_fade_out.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\8e14f550181111484fee5e9250868d39aea75ceb\\output\\res\\anim\\catalyst_fade_out.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\7da101a5d6150798f5db4f898bad2f37a57f5445\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\shake.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\574d80e27f0f09ccb16a3ffe5cbb93b1c2276d56\\output\\res\\anim\\shake.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\tooltip_enter.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\7da101a5d6150798f5db4f898bad2f37a57f5445\\output\\res\\anim\\tooltip_enter.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\slide_down.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\01eaa0d9c8a5582688ffec84d8b85e7d02cb9d37\\output\\res\\anim\\slide_down.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\catalyst_slide_up.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\8e14f550181111484fee5e9250868d39aea75ceb\\output\\res\\anim\\catalyst_slide_up.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\cycle.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\574d80e27f0f09ccb16a3ffe5cbb93b1c2276d56\\output\\res\\anim\\cycle.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\7da101a5d6150798f5db4f898bad2f37a57f5445\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\tooltip_exit.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\7da101a5d6150798f5db4f898bad2f37a57f5445\\output\\res\\anim\\tooltip_exit.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\catalyst_slide_down.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\8e14f550181111484fee5e9250868d39aea75ceb\\output\\res\\anim\\catalyst_slide_down.xml"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev19\\debug\\anim\\fade_out.xml",
+        "source": "C:\\Users\\huyen\\.android\\build-cache\\01eaa0d9c8a5582688ffec84d8b85e7d02cb9d37\\output\\res\\anim\\fade_out.xml"
+    }
+]

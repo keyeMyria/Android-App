@@ -16,7 +16,9 @@ import { connect } from 'react-redux';
 import * as act from '../actions/index';
 import TableDay from './DatLich/TableDay';
 import SelectDevices from './DatLich/SelectDevices';
-
+import SelectDayBar from './DatLich/SelectDayBar';
+import MoreCalender from './DatLich/MoreCalender';
+import SubmitCalender from './DatLich/SubmitCalender';
 
 export const myStorage = {
     setItem: (key, item) => {
@@ -83,23 +85,6 @@ export class DatLich extends Component {
         setTimeout(() => {
             client.subscribe(this.props.id);
         }, 100);
-    }
-
-    TB = (index) => {
-        switch (index) {
-            case 'TB1':
-                this.setState({ TB1: true, TB2: false, TB3: false, TB4: false, allowSync: true });
-                break;
-            case 'TB2':
-                this.setState({ TB1: false, TB2: true, TB3: false, TB4: false, allowSync: true });
-                break;
-            case 'TB3':
-                this.setState({ TB1: false, TB2: false, TB3: true, TB4: false, allowSync: true });
-                break;
-            case 'TB4':
-                this.setState({ TB1: false, TB2: false, TB3: false, TB4: true, allowSync: true });
-                break;
-        }
     }
 
     datLich = () => {
@@ -177,52 +162,25 @@ export class DatLich extends Component {
             }
         }
 
-        let colorDay = [];
-        for (let i = 0; i < 7; i++) {
-            colorDay[i] = this.state.colorDate[i] === true ? '#013E0C' : '#8A8A8A';
-        }
-
         return (
-            <ScrollView style={{ flex: 1, flexDirection: 'column', backgroundColor: '#B9B9B9' }}>
+            <ScrollView style={{ flex: 1, flexDirection: 'column' }}>
                 <View style={{ flex: 1, flexDirection: 'column' }}>
-                    <SelectDevices />
-                    
+
+                    {this.state.connect === true ?
+                        <SelectDevices /> : <View></View>
+                    }
+
                     {this.state.connect === true ?
                         <TableDay /> : <View></View>
                     }
 
                     {this.state.connect === true ?
-                        <View style={{ flex: 2, flexDirection: 'row', justifyContent: 'space-between', alignContent: 'center', alignItems: 'center', paddingLeft: 15, paddingRight: 15, marginBottom: 20, paddingTop: 20, paddingBottom: 20, backgroundColor: 'white' }}>
-                            {this.renderDayCircle('T2', colorDay[0], 2)}
-                            {this.renderDayCircle('T3', colorDay[1], 3)}
-                            {this.renderDayCircle('T4', colorDay[2], 4)}
-                            {this.renderDayCircle('T5', colorDay[3], 5)}
-                            {this.renderDayCircle('T6', colorDay[4], 6)}
-                            {this.renderDayCircle('T7', colorDay[5], 7)}
-                            {this.renderDayCircle('CN', colorDay[6], 'CN')}
-                        </View>
+                        <SelectDayBar />
                         : <View></View>
                     }
 
                     {this.state.connect === true ?
-                        <View style={{ flex: 2, flexDirection: 'row', backgroundColor: 'white' }}>
-                            <TouchableWithoutFeedback onPress={() => this.datLich()}>
-                                <View style={styles.datLichBTN}>
-                                    <Text style={styles.datLichTxt}>Đặt lịch</Text>
-                                </View>
-                            </TouchableWithoutFeedback>
-                        </View>
-                        : <View></View>
-                    }
-
-                    {this.state.connect === true ?
-                        <View style={{ flex: 2, flexDirection: 'row', backgroundColor: 'white' }}>
-                            <TouchableWithoutFeedback onPress={() => this.themLich(this.props.rowCalender)}>
-                                <View style={styles.datLichBTN}>
-                                    <Text style={styles.datLichTxt}>Thêm Lịch</Text>
-                                </View>
-                            </TouchableWithoutFeedback>
-                        </View>
+                        <SubmitCalender />
                         : <View></View>
                     }
                 </View >
@@ -235,64 +193,6 @@ export class DatLich extends Component {
         this.props.inc_row_calender(number);
     }
 
-
-    renderDayCircle = (day, color, number) => {
-        return (
-            <TouchableWithoutFeedback onPress={() => this.onTouchDay(day)}>
-                <View style={{ width: 40, height: 40, backgroundColor: color, borderRadius: 40, justifyContent: 'center' }}>
-                    <Text style={{ fontSize: 20, color: 'white', fontWeight: 'bold', textAlign: 'center' }}>{number}</Text>
-                </View>
-            </TouchableWithoutFeedback>
-        );
-    }
-
-    onTouchDay = (day) => {
-        var color = this.state.colorDate;
-        switch (day) {
-            case 'T2':
-                color[0] = !this.state.colorDate[0]
-                this.setState({
-                    colorDate: color
-                })
-                break;
-            case 'T3':
-                color[1] = !this.state.colorDate[1]
-                this.setState({
-                    colorDate: color
-                })
-                break;
-            case 'T4':
-                color[2] = !this.state.colorDate[2]
-                this.setState({
-                    colorDate: color
-                })
-                break;
-            case 'T5':
-                color[3] = !this.state.colorDate[3]
-                this.setState({
-                    colorDate: color
-                })
-                break;
-            case 'T6':
-                color[4] = !this.state.colorDate[4]
-                this.setState({
-                    colorDate: color
-                })
-                break;
-            case 'T7':
-                color[5] = !this.state.colorDate[5]
-                this.setState({
-                    colorDate: color
-                })
-                break;
-            case 'CN':
-                color[6] = !this.state.colorDate[6]
-                this.setState({
-                    colorDate: color
-                })
-                break;
-        }
-    }
 }
 
 

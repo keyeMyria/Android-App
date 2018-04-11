@@ -21,7 +21,7 @@ export class AddBar extends Component {
                     <Button
                         onPress={() => this.onPressAdd()}
                         title="Thêm"
-                        color="#0C1261"
+                        color="#DCA452"
                         accessibilityLabel="Bấm vào để thêm vào thiết bị"
                     />
                 </View>
@@ -51,7 +51,7 @@ export class AddBar extends Component {
                         accessibilityLabel="Bấm vào để điều khiển thiết bị"
                     />
                 </View>
-            );  
+            );
         })
         return result;
     }

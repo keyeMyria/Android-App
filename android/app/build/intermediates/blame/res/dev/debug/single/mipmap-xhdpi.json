@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\mipmap-xhdpi\\ic_launcher.png",
+        "source": "D:\\project\\Garden\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\project\\Garden\\android\\app\\build\\intermediates\\res\\merged\\dev\\debug\\mipmap-xhdpi\\dev_icon.png",
+        "source": "D:\\project\\Garden\\android\\app\\src\\main\\res\\mipmap-xhdpi\\dev_icon.png"
+    }
+]

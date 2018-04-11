@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\project\Garden\android\app\src\main\jniLibs"/></dataSet><dataSet config="prod"><source path="D:\project\Garden\android\app\src\prod\jniLibs"/></dataSet><dataSet config="debug"><source path="D:\project\Garden\android\app\src\debug\jniLibs"/></dataSet><dataSet config="prodDebug"><source path="D:\project\Garden\android\app\src\prodDebug\jniLibs"/></dataSet></merger>
