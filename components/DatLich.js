@@ -43,18 +43,7 @@ export class DatLich extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            connect: false,
-            TB1: true,
-            TB2: false,
-            TB3: false,
-            TB4: false,
-            gio1: '', phut1: '', phutChay1: '',
-            gio2: '', phut2: '', phutChay2: '',
-            gio3: '', phut3: '', phutChay3: '',
-            gio4: '', phut4: '', phutChay4: '',
-            gio5: '', phut5: '', phutChay5: '',
-            allowSync: true,
-            colorDate: [true, true, true, true, true, true, true]
+            connect: false
         }
     }
 
@@ -87,76 +76,40 @@ export class DatLich extends Component {
         }, 100);
     }
 
-    datLich = () => {
-        var lich = {
-            lich: [
-                [this.state.gio1, this.state.phut1, this.state.phutChay1],
-                [this.state.gio2, this.state.phut2, this.state.phutChay2],
-                [this.state.gio3, this.state.phut3, this.state.phutChay3],
-                [this.state.gio4, this.state.phut4, this.state.phutChay4],
-                [this.state.gio5, this.state.phut5, this.state.phutChay5]
-            ],
-            TB1: this.state.TB1,
-            TB2: this.state.TB2,
-            TB3: this.state.TB3,
-            TB4: this.state.TB4,
-            day: [this.state.colorDate[0], this.state.colorDate[1], this.state.colorDate[2], this.state.colorDate[3], this.state.colorDate[4], this.state.colorDate[5], this.state.colorDate[6]]
-        }
-
-        var lichSEND = {
-            lich: [
-                [parseFloat(this.state.gio1), parseFloat(this.state.phut1), parseFloat(this.state.phutChay1)],
-                [parseFloat(this.state.gio2), parseFloat(this.state.phut2), parseFloat(this.state.phutChay2)],
-                [parseFloat(this.state.gio3), parseFloat(this.state.phut3), parseFloat(this.state.phutChay3)],
-                [parseFloat(this.state.gio4), parseFloat(this.state.phut4), parseFloat(this.state.phutChay4)],
-                [parseFloat(this.state.gio5), parseFloat(this.state.phut5), parseFloat(this.state.phutChay5)]
-            ],
-            TB1: this.state.TB1,
-            TB2: this.state.TB2,
-            TB3: this.state.TB3,
-            TB4: this.state.TB4,
-            day: [this.state.colorDate[0], this.state.colorDate[1], this.state.colorDate[2], this.state.colorDate[3], this.state.colorDate[4], this.state.colorDate[5], this.state.colorDate[6]]
-        }
-
-        if (this.state.connect === true) {
-            const datLich = new Message(JSON.stringify(lichSEND));
-            datLich.destinationName = this.props.id;
-            client.send(datLich);
-            ToastAndroid.showWithGravity(
-                'Hoàn thành !',
-                ToastAndroid.SHORT,
-                ToastAndroid.TOP
-            );
-            for (let i = 1; i < 5; i++) {
-                let tmpName = `TB${i}`;
-                if (this.state[tmpName] === true) {
-                    AsyncStorage.setItem(`${this.props.id}TB1`, JSON.stringify(lich));
-                }
-            }
-        }
-    }
-
     render() {
-        for (let i = 1; i < 5; i++) {
-            let tmpName = `TB${i}`;
-            if (this.state[tmpName] === true && this.state.allowSync === true) {
-                AsyncStorage.getItem(`${this.props.id}${tmpName}`).then(data1 => {
+        let { tb } = this.props;
+        for (let i = 0; i < 5; i++) {
+            if (tb[i] === true && this.state.allowSync === true) {
+                AsyncStorage.getItem(`${this.props.id}TB${i}`).then(data1 => {
+                    console.log(data1);
                     if (data1) {
                         let json = JSON.parse(data1);
-                        let data = json.lich;
-                        this.setState({
-                            TB1: i === 1 ? true : false,
-                            TB2: i === 2 ? true : false,
-                            TB3: i === 3 ? true : false,
-                            TB4: i === 4 ? true : false,
-                            gio1: data[0][0], phut1: data[0][1], phutChay1: data[0][2],
-                            gio2: data[1][0], phut2: data[1][1], phutChay2: data[1][2],
-                            gio3: data[2][0], phut3: data[2][1], phutChay3: data[2][2],
-                            gio4: data[3][0], phut4: data[3][1], phutChay4: data[3][2],
-                            gio5: data[4][0], phut5: data[4][1], phutChay5: data[4][2],
-                            allowSync: false,
-                            colorDate: json.day
-                        })
+                        console.log(json);
+                        let lich = json.lich;
+                        let pointTime = [
+                            { hour: lich[0][0], minute: lich[0][1] },
+                            { hour: lich[1][0], minute: lich[1][1] },
+                            { hour: lich[2][0], minute: lich[2][1] },
+                            { hour: lich[3][0], minute: lich[3][1] },
+                            { hour: lich[4][0], minute: lich[4][1] },
+                            { hour: lich[5][0], minute: lich[5][1] },
+                            { hour: lich[6][0], minute: lich[6][1] },
+                            { hour: lich[7][0], minute: lich[7][1] },
+                        ]
+                        let runLong = [
+                            { hour: Math.floor(lich[0][2] / 60), minute: lich[0][2] % 60 },
+                            { hour: Math.floor(lich[1][2] / 60), minute: lich[1][2] % 60 },
+                            { hour: Math.floor(lich[2][2] / 60), minute: lich[2][2] % 60 },
+                            { hour: Math.floor(lich[3][2] / 60), minute: lich[3][2] % 60 },
+                            { hour: Math.floor(lich[4][2] / 60), minute: lich[4][2] % 60 },
+                            { hour: Math.floor(lich[5][2] / 60), minute: lich[5][2] % 60 },
+                            { hour: Math.floor(lich[6][2] / 60), minute: lich[6][2] % 60 },
+                            { hour: Math.floor(lich[7][2] / 60), minute: lich[7][2] % 60 },
+                        ]
+                        let colorDay = json.day;
+                        this.props.restore_calender_to_store(pointTime);
+                        this.props.restore_timerun_to_store(runLong);
+                        this.props.restore_color_day(colorDay);
                     }
                 })
             }
@@ -197,58 +150,7 @@ export class DatLich extends Component {
 
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-    borderTable: {
-        flex: 1,
-        justifyContent: 'center',
-        alignContent: 'center',
-        marginTop: 10,
-        borderColor: 'black',
-        borderStyle: 'solid',
-        borderLeftWidth: 1,
-        borderBottomWidth: 2,
-        borderRightWidth: 2,
-        borderTopWidth: 2,
-    },
-    viewWrap: {
-        flex: 1,
-        alignContent: 'center',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderColor: '#460259',
-        borderStyle: 'solid',
-        borderLeftWidth: 5,
-        borderBottomWidth: 5,
-        borderRightWidth: 5,
-        borderTopWidth: 5,
-        marginLeft: 50,
-        marginRight: 50,
-        height: 60,
-    },
-    datLichBTN: {
-        flex: 1,
-        height: 60,
-        justifyContent: 'center',
-        alignContent: 'center',
-        alignItems: 'center',
-        borderColor: '#170559',
-        borderStyle: 'solid',
-        borderLeftWidth: 2,
-        borderBottomWidth: 4,
-        borderRightWidth: 4,
-        borderTopWidth: 4,
-    },
-    datLichTxt: {
-        fontSize: 30,
-        textAlign: 'center',
-        color: '#170559',
-        fontWeight: 'bold'
-    }
+
 });
 
 
@@ -256,7 +158,8 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => {
     return {
         id: state.id,
-        rowCalender: state.rowCalender
+        rowCalender: state.rowCalender,
+        tb: state.tb
     }
 }
 
@@ -270,6 +173,15 @@ const mapDispatchToProps = (dispatch, props) => {
         },
         inc_row_calender: (number) => {
             dispatch(act.inc_row_calender(number));
+        },
+        restore_calender_to_store: (data) => {
+            dispatch(act.restore_calender_to_store(data));
+        },
+        restore_timerun_to_store: (data) => {
+            dispatch(act.restore_timerun_to_store(data));
+        },
+        restore_color_day: (data) => {
+            dispatch(act.restore_color_day(data));
         }
     }
 }

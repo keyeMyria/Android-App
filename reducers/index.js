@@ -8,6 +8,7 @@ import rowCalender from './rowCalender';
 import tb from './tb';
 import pointTime from './pointTime';
 import runLong from './runLong';
+import colorDay from './colorDay';
 
 const appReducers = combineReducers({
     id: id,
@@ -18,7 +19,8 @@ const appReducers = combineReducers({
     rowCalender: rowCalender,
     tb: tb,
     pointTime: pointTime,
-    runLong: runLong
+    runLong: runLong,
+    colorDay: colorDay
 });
 
 export default appReducers;

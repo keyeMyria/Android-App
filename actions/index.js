@@ -154,3 +154,33 @@ export const set_run_long = (array, data, index) => {
         runLong: tmpData
     }
 }
+
+
+
+export const change_day_bar = (data) => {
+    return {
+        type: Type.CHANGE_DAY_BAR,
+        colorDay: data,
+    }
+}
+
+export const restore_calender_to_store = (data) => {
+    return {
+        type: Type.RESTORE_CALENDER_TO_STORE,
+        data: data
+    }
+}
+
+export const restore_timerun_to_store = (data) => {
+    return {
+        type: Type.RESTORE_TIME_RUN_TO_STORE,
+        data: data
+    }
+}
+
+export const restore_color_day = (data) => {
+    return {
+        type: Type.RESTORE_COLOR_DAY,
+        data: data
+    }
+}
