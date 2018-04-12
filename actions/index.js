@@ -100,8 +100,57 @@ export const add_name = (name) => {
 }
 
 export const inc_row_calender = (number) => {
+    return dispatch => {
+        dispatch(dispatch_inc_row_calender(0));
+        setTimeout(() => {
+            dispatch(dispatch_inc_row_calender(number));
+        }, 25);
+    }
+}
+
+export const dispatch_inc_row_calender = (number) => {
     return {
         type: Type.INC_ROW_CALENDER,
         rowCalender: number + 1
+    }
+}
+
+export const change_selected_dv = (tb) => {
+    let tbTable = [false, false, false, false];
+    switch (tb) {
+        case 'TB1':
+            tbTable[0] = true;
+            break;
+        case 'TB2':
+            tbTable[1] = true;
+            break;
+        case 'TB3':
+            tbTable[2] = true;
+            break;
+        case 'TB4':
+            tbTable[3] = true;
+            break;
+    }
+    return {
+        type: Type.CHANGED_SELECTED_DV,
+        TB: tbTable
+    }
+}
+
+export const set_hours_run = (array, data, index) => {
+    let tmpData = array;
+    tmpData[(index - 1)] = data;
+    return {
+        type: Type.SET_DATA_TIME,
+        pointTime: tmpData
+    }
+}
+
+export const set_run_long = (array, data, index) => {
+    let tmpData = array;
+    tmpData[(index - 1)] = data;
+    return {
+        type: Type.SET_RUN_LONG,
+        runLong: tmpData
     }
 }

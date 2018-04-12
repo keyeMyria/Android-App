@@ -32,17 +32,6 @@ export class Home extends Component {
                     <NhietDo />
                     <CaiDat />
                     <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
-                    <Button full bordered light success full style={{ width: '100%' }}>
-                        <Text>Xóa thiết bị</Text>
-                    </Button>
-                    {/*
-                        <Button
-                            onPress={() => this.onDelete()}
-                            title="Delete"
-                            color="#841584"
-                            accessibilityLabel="Learn more about this purple button"
-                        />
-                        */}
                     </View>
                 </View>
             </ScrollView>

@@ -5,6 +5,9 @@ import scanned from './scanned';
 import name from './name';
 import status from './status';
 import rowCalender from './rowCalender';
+import tb from './tb';
+import pointTime from './pointTime';
+import runLong from './runLong';
 
 const appReducers = combineReducers({
     id: id,
@@ -12,7 +15,10 @@ const appReducers = combineReducers({
     scanned: scanned,
     name: name,
     status: status,
-    rowCalender: rowCalender
+    rowCalender: rowCalender,
+    tb: tb,
+    pointTime: pointTime,
+    runLong: runLong
 });
 
 export default appReducers;

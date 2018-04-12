@@ -16,19 +16,24 @@ import { Button, Text } from 'native-base';
 export class SubmitCalender extends Component {
 
     datLich = () => {
+        let { runLong, pointTime, tb } = this.props;
+
         var lich = {
             lich: [
-                [this.state.gio1, this.state.phut1, this.state.phutChay1],
-                [this.state.gio2, this.state.phut2, this.state.phutChay2],
-                [this.state.gio3, this.state.phut3, this.state.phutChay3],
-                [this.state.gio4, this.state.phut4, this.state.phutChay4],
-                [this.state.gio5, this.state.phut5, this.state.phutChay5]
+                [pointTime[0].hour, pointTime[0].minute, runLong[0].hour + runLong[0].minute],
+                [pointTime[1].hour, pointTime[1].minute, runLong[1].hour + runLong[1].minute],
+                [pointTime[2].hour, pointTime[2].minute, runLong[2].hour + runLong[2].minute],
+                [pointTime[3].hour, pointTime[3].minute, runLong[3].hour + runLong[3].minute],
+                [pointTime[4].hour, pointTime[4].minute, runLong[4].hour + runLong[4].minute],
+                [pointTime[5].hour, pointTime[5].minute, runLong[5].hour + runLong[5].minute],
+                [pointTime[6].hour, pointTime[6].minute, runLong[6].hour + runLong[6].minute],
+                [pointTime[7].hour, pointTime[7].minute, runLong[7].hour + runLong[7].minute],
             ],
-            TB1: this.state.TB1,
-            TB2: this.state.TB2,
-            TB3: this.state.TB3,
-            TB4: this.state.TB4,
-            day: [this.state.colorDate[0], this.state.colorDate[1], this.state.colorDate[2], this.state.colorDate[3], this.state.colorDate[4], this.state.colorDate[5], this.state.colorDate[6]]
+            TB1: tb[0],
+            TB2: tb[1],
+            TB3: tb[2],
+            TB4: tb[3],
+            //day: [this.state.colorDate[0], this.state.colorDate[1], this.state.colorDate[2], this.state.colorDate[3], this.state.colorDate[4], this.state.colorDate[5], this.state.colorDate[6]]
         }
 
         var lichSEND = {
@@ -67,16 +72,9 @@ export class SubmitCalender extends Component {
     render() {
         return (
             <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', alignContent: 'center', justifyContent: 'center' }}>
-                <Button full bordered light success full style={{ width: '100%' }}>
+                <Button full bordered light success full style={{ width: '100%' }} onPress={() => this.datLich()}>
                     <Text>Đặt lịch</Text>
                 </Button>
-                {/*
-                <TouchableWithoutFeedback onPress={() => this.datLich()}>
-                    <View style={styles.datLichBTN}>
-                        <Text style={styles.datLichTxt}>Đặt lịch</Text>
-                    </View>
-                </TouchableWithoutFeedback>
-                */}
             </View>
         );
     }
@@ -85,57 +83,7 @@ export class SubmitCalender extends Component {
 
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-    borderTable: {
-        flex: 1,
-        justifyContent: 'center',
-        alignContent: 'center',
-        borderColor: 'black',
-        borderStyle: 'solid',
-        borderLeftWidth: 1,
-        borderBottomWidth: 2,
-        borderRightWidth: 2,
-        borderTopWidth: 2,
-    },
-    viewWrap: {
-        flex: 1,
-        alignContent: 'center',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderColor: '#460259',
-        borderStyle: 'solid',
-        borderLeftWidth: 5,
-        borderBottomWidth: 5,
-        borderRightWidth: 5,
-        borderTopWidth: 5,
-        marginLeft: 50,
-        marginRight: 50,
-        height: 60,
-    },
-    datLichBTN: {
-        flex: 1,
-        height: 60,
-        justifyContent: 'center',
-        alignContent: 'center',
-        alignItems: 'center',
-        borderColor: '#170559',
-        borderStyle: 'solid',
-        borderLeftWidth: 2,
-        borderBottomWidth: 4,
-        borderRightWidth: 4,
-        borderTopWidth: 4,
-    },
-    datLichTxt: {
-        fontSize: 30,
-        textAlign: 'center',
-        color: '#170559',
-        fontWeight: 'bold'
-    }
+
 });
 
 
@@ -143,7 +91,10 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => {
     return {
         id: state.id,
-        rowCalender: state.rowCalender
+        rowCalender: state.rowCalender,
+        pointTime: state.pointTime,
+        runLong: state.runLong,
+        tb: state.tb
     }
 }
 

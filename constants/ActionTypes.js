@@ -5,3 +5,6 @@ export const GET_LIST_NAME = 'GET_LIST_NAME';
 export const HANDEL_QRCODE_READ = 'HANDEL_QRCODE_READ';
 export const STATUS_PAGE = 'STATUS_PAGE';
 export const INC_ROW_CALENDER = 'INC_ROW_CALENDER';
+export const CHANGED_SELECTED_DV = 'CHANGED_SELECTED_DV';
+export const SET_DATA_TIME = 'SET_DATA_TIME';
+export const SET_RUN_LONG = 'SET_RUN_LONG';

@@ -4,12 +4,12 @@ import {
     StyleSheet,
     Text,
     View,
-    Button,
     ToastAndroid,
     TextInput,
     BackAndroid
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import { Button } from 'native-base';
 import * as act from '../actions/index';
 import { connect } from 'react-redux';
 
@@ -20,18 +20,16 @@ export class AddName extends Component {
     }
     render() {
         return (
-            <View>
+            <View style={{ flex: 1, marginTop: 20 }}>
                 <TextInput
+                    underlineColorAndroid='transparent'
                     style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
                     onChangeText={(text) => this.setState({ text })}
                     value={this.state.text}
                 />
-                <Button
-                    onPress={() => this.onAddName()}
-                    title="Thêm thiết bị"
-                    color="#841584"
-                    accessibilityLabel="Learn more about this purple button"
-                />
+                <Button full bordered light success full style={{ width: '100%', marginTop: 10 }} onPress={() => this.onAddName()}>
+                    <Text>Thêm thiết bị</Text>
+                </Button>
             </View>
 
         );

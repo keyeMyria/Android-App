@@ -47,7 +47,7 @@ export class AddBar extends Component {
                     <Button
                         onPress={() => this.onPress(machine[index])}
                         title={value}
-                        color={this.props.currentID === machine[index] ? "#1F9E28" : "#0C1261"}
+                        color={this.props.currentID === machine[index] ? "#1F9E28" : "#B4B4B4"}
                         accessibilityLabel="Bấm vào để điều khiển thiết bị"
                     />
                 </View>
