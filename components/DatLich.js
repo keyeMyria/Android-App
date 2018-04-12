@@ -79,12 +79,10 @@ export class DatLich extends Component {
     render() {
         let { tb } = this.props;
         for (let i = 0; i < 5; i++) {
-            if (tb[i] === true && this.state.allowSync === true) {
+            if (tb[i] === true) {
                 AsyncStorage.getItem(`${this.props.id}TB${i}`).then(data1 => {
-                    console.log(data1);
                     if (data1) {
                         let json = JSON.parse(data1);
-                        console.log(json);
                         let lich = json.lich;
                         let pointTime = [
                             { hour: lich[0][0], minute: lich[0][1] },
@@ -106,10 +104,12 @@ export class DatLich extends Component {
                             { hour: Math.floor(lich[6][2] / 60), minute: lich[6][2] % 60 },
                             { hour: Math.floor(lich[7][2] / 60), minute: lich[7][2] % 60 },
                         ]
+                        console.log(json);
                         let colorDay = json.day;
                         this.props.restore_calender_to_store(pointTime);
                         this.props.restore_timerun_to_store(runLong);
                         this.props.restore_color_day(colorDay);
+                        this.props.restore_row_calender(json.rowCalender + 1);
                     }
                 })
             }
@@ -182,6 +182,9 @@ const mapDispatchToProps = (dispatch, props) => {
         },
         restore_color_day: (data) => {
             dispatch(act.restore_color_day(data));
+        },
+        restore_row_calender: (data) => {
+            dispatch(act.restore_row_calender(data));
         }
     }
 }

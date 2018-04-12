@@ -16,7 +16,7 @@ import { Button, Text } from 'native-base';
 export class SubmitCalender extends Component {
 
     datLich = () => {
-        let { runLong, pointTime, tb, colorDay } = this.props;
+        let { runLong, pointTime, tb, colorDay, rowCalender } = this.props;
 
         var lich = {
             lich: [
@@ -33,7 +33,8 @@ export class SubmitCalender extends Component {
             TB2: tb[1],
             TB3: tb[2],
             TB4: tb[3],
-            day: [colorDay[0] === true ? 1 : 0, colorDay[1] === true ? 1 : 0, colorDay[2] === true ? 1 : 0, colorDay[3] === true ? 1 : 0, colorDay[4] === true ? 1 : 0, colorDay[5] === true ? 1 : 0, colorDay[6] === true ? 1 : 0]
+            day: [colorDay[0] === true ? 1 : 0, colorDay[1] === true ? 1 : 0, colorDay[2] === true ? 1 : 0, colorDay[3] === true ? 1 : 0, colorDay[4] === true ? 1 : 0, colorDay[5] === true ? 1 : 0, colorDay[6] === true ? 1 : 0],
+            rowCalender: rowCalender
         }
 
         console.log(lich);

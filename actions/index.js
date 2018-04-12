@@ -184,3 +184,10 @@ export const restore_color_day = (data) => {
         data: data
     }
 }
+
+export const restore_row_calender = (data) => {
+    return {
+        type: Type.RESTORE_ROW_CALENDER,
+        data: data
+    }
+}

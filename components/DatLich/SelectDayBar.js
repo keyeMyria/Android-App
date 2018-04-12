@@ -44,6 +44,7 @@ export class SelectDayBar extends Component {
     componentWillReceiveProps() {
         setTimeout(() => {
             let tmpColorDay = this.props.colorDay;
+            
             for (let i = 0; i < 7; i++) {
                 tmpColorDay[i] = tmpColorDay[i] === 1 ? true : false
             }
