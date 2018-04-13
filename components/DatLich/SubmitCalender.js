@@ -33,7 +33,7 @@ export class SubmitCalender extends Component {
             TB2: tb[1],
             TB3: tb[2],
             TB4: tb[3],
-            day: [colorDay[0] === true ? 1 : 0, colorDay[1] === true ? 1 : 0, colorDay[2] === true ? 1 : 0, colorDay[3] === true ? 1 : 0, colorDay[4] === true ? 1 : 0, colorDay[5] === true ? 1 : 0, colorDay[6] === true ? 1 : 0],
+            day: [colorDay[0], colorDay[1], colorDay[2], colorDay[3], colorDay[4], colorDay[5], colorDay[6]],
             rowCalender: rowCalender
         }
 
@@ -47,7 +47,7 @@ export class SubmitCalender extends Component {
             ToastAndroid.SHORT,
             ToastAndroid.TOP
         );
-        for (let i = 1; i < 5; i++) {
+        for (let i = 0; i < 4; i++) {
             if (tb[i] === true) {
                 AsyncStorage.setItem(`${this.props.id}TB${i}`, JSON.stringify(lich));
             }

@@ -59,6 +59,7 @@ export class CaiDat extends Component {
     }
 
     componentDidMount() {
+        /*
         client.on('connectionLost', (responseObject) => {
             if (responseObject.errorCode !== 0) {
                 this.setState({
@@ -178,11 +179,12 @@ export class CaiDat extends Component {
                 })
             }
         });
+        */
     }
 
     componentWillReceiveProps() {
         setTimeout(() => {
-            client.subscribe(this.props.id);
+            //client.subscribe(this.props.id);
         }, 100)
     }
 

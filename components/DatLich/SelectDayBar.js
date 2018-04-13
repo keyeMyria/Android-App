@@ -27,6 +27,7 @@ export class SelectDayBar extends Component {
 
     render() {
         let { colorDay } = this.state;
+        console.log(colorDay);
         return (
             <View style={styles.wrapBar}>
                 {this.renderDayCircle('T2', colorDay[0], 2)}
@@ -40,18 +41,30 @@ export class SelectDayBar extends Component {
         );
     }
 
+    componentDidMount() {
+        /*
+        let tmpColorDay = this.props.colorDay;
+        for (let i = 0; i < 7; i++) {
+            tmpColorDay[i] = tmpColorDay[i] === 1 ? true : false
+        }
+        */
+        this.setState({
+            colorDay: this.props.colorDay
+        })
+    }
 
     componentWillReceiveProps() {
         setTimeout(() => {
+            /*
             let tmpColorDay = this.props.colorDay;
-            
             for (let i = 0; i < 7; i++) {
                 tmpColorDay[i] = tmpColorDay[i] === 1 ? true : false
             }
+            */
             this.setState({
-                colorDay: tmpColorDay
+                colorDay: this.props.colorDay
             })
-        }, 10)
+        })
     }
 
 

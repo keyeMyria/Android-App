@@ -23,16 +23,47 @@ export class TableDay extends Component {
         super(props);
         this.state = {
             connect: false,
-            gio1: '00', phut1: '00', phutChay1: '0',
-            gio2: '00', phut2: '00', phutChay2: '0',
-            gio3: '00', phut3: '00', phutChay3: '0',
-            gio4: '00', phut4: '00', phutChay4: '0',
-            gio5: '00', phut5: '00', phutChay5: '0',
-            gio6: '00', phut6: '00', phutChay6: '0',
-            gio7: '00', phut7: '00', phutChay7: '0',
-            gio8: '00', phut8: '00', phutChay8: '0',
+            pointTime: [
+                { hour: 0, minute: 0 },
+                { hour: 0, minute: 0 },
+                { hour: 0, minute: 0 },
+                { hour: 0, minute: 0 },
+                { hour: 0, minute: 0 },
+                { hour: 0, minute: 0 },
+                { hour: 0, minute: 0 },
+                { hour: 0, minute: 0 },
+            ],
+            runLong: [
+                { hour: 0, minute: 0 },
+                { hour: 0, minute: 0 },
+                { hour: 0, minute: 0 },
+                { hour: 0, minute: 0 },
+                { hour: 0, minute: 0 },
+                { hour: 0, minute: 0 },
+                { hour: 0, minute: 0 },
+                { hour: 0, minute: 0 },
+            ],
         }
     }
+ 
+    componentDidMount() {
+        let { pointTime, runLong } = this.props;
+        this.setState({
+            pointTime: pointTime,
+            runLong: runLong
+        })
+    }
+    
+    componentWillReceiveProps() {
+        let { pointTime, runLong } = this.props;
+        setTimeout(() => {
+            this.setState({
+                pointTime: pointTime,
+                runLong: runLong
+            })
+        })
+    }
+    
 
     timePicker_Day = async (stateKey, options, number) => {
         try {
@@ -48,6 +79,11 @@ export class TableDay extends Component {
                 console.log("Picker");
                 this.props.send_day_to_store(this.props.pointTime, { hour, minute }, number);
                 this.props.inc_row_calender(this.props.rowCalender > number ? this.props.rowCalender - 1 : number);
+                let tmpPT = this.state.pointTime;
+                tmpPT[number - 1] = { hour: hour, minute: minute };
+                this.setState({
+                    pointTime: tmpPT
+                })
             }
         } catch ({ code, message }) {
             console.warn('Lỗi chọn ngày!', message);
@@ -64,6 +100,11 @@ export class TableDay extends Component {
             if (action === TimePickerAndroid.timeSetAction) {
                 this.props.inc_row_calender(this.props.rowCalender > number ? this.props.rowCalender - 1 : number);
                 this.props.send_run_long_to_store(this.props.runLong, { hour, minute }, number);
+                let tmpRT = this.state.runLong;
+                tmpRT[number - 1] = { hour: hour, minute: minute };
+                this.setState({
+                    runLong: tmpRT
+                })
             }
         } catch ({ code, message }) {
             console.warn('Lỗi chọn ngày!', message);
@@ -104,13 +145,13 @@ export class TableDay extends Component {
                     <View style={styles.card}>
                         <View style={{ flex: 2, justifyContent: 'center' }}>
                             <Text onPress={() => this.timePicker_Day('to', {}, number)} style={{ fontSize: 55, fontWeight: 'bold', textAlign: 'center' }}>
-                                {this.props.pointTime[(number - 1)].hour}:{this.props.pointTime[(number - 1)].minute < 10 ? `0${this.props.pointTime[(number - 1)].minute}` : this.props.pointTime[(number - 1)].minute}
+                                {this.state.pointTime[(number - 1)].hour}:{this.state.pointTime[(number - 1)].minute < 10 ? `0${this.state.pointTime[(number - 1)].minute}` : this.state.pointTime[(number - 1)].minute}
                             </Text>
                         </View>
 
                         <View style={{ flex: 2, justifyContent: 'center' }}>
                             <Text onPress={() => this.timePicker_Run('to', {}, number)} style={{ fontSize: 55, fontWeight: 'bold', textAlign: 'center' }}>
-                                {this.props.runLong[(number - 1)].hour}:{this.props.runLong[(number - 1)].minute < 10 ? `0${this.props.runLong[(number - 1)].minute}` : this.props.runLong[(number - 1)].minute}
+                                {this.state.runLong[(number - 1)].hour}:{this.state.runLong[(number - 1)].minute < 10 ? `0${this.state.runLong[(number - 1)].minute}` : this.state.runLong[(number - 1)].minute}
                             </Text>
                         </View>
                     </View> : <View></View>

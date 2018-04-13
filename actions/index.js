@@ -101,10 +101,7 @@ export const add_name = (name) => {
 
 export const inc_row_calender = (number) => {
     return dispatch => {
-        dispatch(dispatch_inc_row_calender(0));
-        setTimeout(() => {
-            dispatch(dispatch_inc_row_calender(number));
-        }, 25);
+        dispatch(dispatch_inc_row_calender(number));
     }
 }
 
@@ -203,7 +200,8 @@ export const change_name_dv = (array) => {
 export const restore_name_dv = (id) => {
     return dispatch => {
         AsyncStorage.getItem(`${id}name`).then((names) => {
-            dispatch(dispatch_name_dv(JSON.parse(names)));
+            if (names)
+                dispatch(dispatch_name_dv(JSON.parse(names)));
         })
     }
 }

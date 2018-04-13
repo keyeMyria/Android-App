@@ -43,11 +43,12 @@ export class DatLich extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            connect: false
+            connect: true
         }
     }
 
     componentDidMount() {
+        /*
         client.on('connectionLost', (responseObject) => {
             if (responseObject.errorCode !== 0) {
                 this.setState({
@@ -68,11 +69,12 @@ export class DatLich extends Component {
                 })
             }
         });
+        */
     }
 
     componentWillReceiveProps() {
         setTimeout(() => {
-            client.subscribe(this.props.id);
+            //client.subscribe(this.props.id);
         }, 100);
     }
 
@@ -81,6 +83,7 @@ export class DatLich extends Component {
         for (let i = 0; i < 5; i++) {
             if (tb[i] === true) {
                 AsyncStorage.getItem(`${this.props.id}TB${i}`).then(data1 => {
+                    console.log(data1);
                     if (data1) {
                         let json = JSON.parse(data1);
                         let lich = json.lich;
@@ -105,10 +108,38 @@ export class DatLich extends Component {
                             { hour: Math.floor(lich[7][2] / 60), minute: lich[7][2] % 60 },
                         ]
                         let colorDay = json.day;
+                        console.log(colorDay);
                         this.props.restore_calender_to_store(pointTime);
                         this.props.restore_timerun_to_store(runLong);
                         this.props.restore_color_day(colorDay);
                         this.props.restore_row_calender(json.rowCalender + 1);
+                    } else {
+                        console.log('NON');
+                        let pointTime = [
+                            { hour: 0, minute: 0 },
+                            { hour: 0, minute: 0 },
+                            { hour: 0, minute: 0 },
+                            { hour: 0, minute: 0 },
+                            { hour: 0, minute: 0 },
+                            { hour: 0, minute: 0 },
+                            { hour: 0, minute: 0 },
+                            { hour: 0, minute: 0 },
+                        ]
+                        let runLong = [
+                            { hour: 0, minute: 0 },
+                            { hour: 0, minute: 0 },
+                            { hour: 0, minute: 0 },
+                            { hour: 0, minute: 0 },
+                            { hour: 0, minute: 0 },
+                            { hour: 0, minute: 0 },
+                            { hour: 0, minute: 0 },
+                            { hour: 0, minute: 0 },
+                        ]
+                        let colorDay = [true, true, true, true, true, true, true];
+                        this.props.restore_calender_to_store(pointTime);
+                        this.props.restore_timerun_to_store(runLong);
+                        this.props.restore_color_day(colorDay);
+                        
                     }
                 })
             }

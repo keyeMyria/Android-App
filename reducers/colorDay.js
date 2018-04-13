@@ -8,6 +8,7 @@ const colorDay = (state = initialState, action) => {
             break;
         case Type.RESTORE_COLOR_DAY:
             state = action.data;
+            console.log(action.data);
             break;
     }
     return state;
