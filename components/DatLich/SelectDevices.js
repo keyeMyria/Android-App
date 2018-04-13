@@ -52,8 +52,7 @@ export class SelectDevices extends Component {
     }
 
     render() {
-        let { TB } = this.props;
-        console.log(TB);
+        let { TB, listDV } = this.props;
         return (
             <View style={{ flex: 1, flexDirection: 'column', backgroundColor: 'white' }}>
                 <TouchableWithoutFeedback onPress={() => this.onChangeTB('TB1')}>
@@ -69,7 +68,7 @@ export class SelectDevices extends Component {
                             <MaterialCommunityIcons name="fan" size={60} color={TB[0] === true ? "#085007" : "#A2A2A2"} />
                         </View>
                         <View style={{ flex: 8, justifyContent: 'center' }}>
-                            <Text style={{ fontSize: TB[0] === true ? 27 : 25, textAlign: 'left', fontWeight: 'bold', color: TB[0] === true ? "#085007" : "#A2A2A2" }}>Thiết bị 1</Text>
+                            <Text style={{ fontSize: TB[0] === true ? 27 : 25, textAlign: 'left', fontWeight: 'bold', color: TB[0] === true ? "#085007" : "#A2A2A2" }}>{listDV[0]}</Text>
                         </View>
                     </View>
                 </TouchableWithoutFeedback>
@@ -87,7 +86,7 @@ export class SelectDevices extends Component {
                             <MaterialCommunityIcons name="fan" size={60} color={TB[1] === true ? "#085007" : "#A2A2A2"} />
                         </View>
                         <View style={{ flex: 8, justifyContent: 'center' }}>
-                            <Text style={{ fontSize: TB[1] === true ? 27 : 25, textAlign: 'left', fontWeight: 'bold', color: TB[1] === true ? "#085007" : "#A2A2A2" }}>Thiết bị 2</Text>
+                            <Text style={{ fontSize: TB[1] === true ? 27 : 25, textAlign: 'left', fontWeight: 'bold', color: TB[1] === true ? "#085007" : "#A2A2A2" }}>{listDV[1]}</Text>
                         </View>
                     </View>
                 </TouchableWithoutFeedback>
@@ -105,7 +104,7 @@ export class SelectDevices extends Component {
                             <MaterialCommunityIcons name="fan" size={60} color={TB[2] === true ? "#085007" : "#A2A2A2"} />
                         </View>
                         <View style={{ flex: 8, justifyContent: 'center' }}>
-                            <Text style={{ fontSize: TB[2] === true ? 27 : 25, textAlign: 'left', fontWeight: 'bold', color: TB[2] === true ? "#085007" : "#A2A2A2" }}>Thiết bị 3</Text>
+                            <Text style={{ fontSize: TB[2] === true ? 27 : 25, textAlign: 'left', fontWeight: 'bold', color: TB[2] === true ? "#085007" : "#A2A2A2" }}>{listDV[2]}</Text>
                         </View>
                     </View>
                 </TouchableWithoutFeedback>
@@ -123,7 +122,7 @@ export class SelectDevices extends Component {
                             <MaterialCommunityIcons name="fan" size={60} color={TB[3] === true ? "#085007" : "#A2A2A2"} />
                         </View>
                         <View style={{ flex: 8, justifyContent: 'center' }}>
-                            <Text style={{ fontSize: TB[3] === true ? 27 : 25, textAlign: 'left', fontWeight: 'bold', color: TB[3] === true ? "#085007" : "#A2A2A2" }}>Thiết bị 4</Text>
+                            <Text style={{ fontSize: TB[3] === true ? 27 : 25, textAlign: 'left', fontWeight: 'bold', color: TB[3] === true ? "#085007" : "#A2A2A2" }}>{listDV[3]}</Text>
                         </View>
                     </View>
                 </TouchableWithoutFeedback>
@@ -144,7 +143,8 @@ const mapStateToProps = state => {
     return {
         id: state.id,
         rowCalender: state.rowCalender,
-        TB: state.tb
+        TB: state.tb,
+        listDV: state.listDV
     }
 }
 

@@ -104,7 +104,6 @@ export class DatLich extends Component {
                             { hour: Math.floor(lich[6][2] / 60), minute: lich[6][2] % 60 },
                             { hour: Math.floor(lich[7][2] / 60), minute: lich[7][2] % 60 },
                         ]
-                        console.log(json);
                         let colorDay = json.day;
                         this.props.restore_calender_to_store(pointTime);
                         this.props.restore_timerun_to_store(runLong);

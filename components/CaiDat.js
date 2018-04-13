@@ -188,13 +188,14 @@ export class CaiDat extends Component {
 
 
     render() {
+        let { listDV } = this.props;
         return (
             [<View style={styles.containner} key={"row 1"}>
                 {this.state.connect === true ?
                     [<Card style={styles.borderBox1} key={"Thiet Bi 1"}>
                         <View style={styles.View}>
                             <Text style={styles.Text}>
-                                Thiết bị 1
+                                {listDV[0]}
                             </Text>
                         </View>
                         <View style={{ flex: 1, width: 80, alignContent: 'center', alignItems: 'center', paddingBottom: 10, marginTop: 10 }}>
@@ -209,8 +210,8 @@ export class CaiDat extends Component {
                     <Card style={styles.borderBox2} key={"Thiet Bi 2"}>
                         <View style={styles.View}>
                             <Text style={styles.Text}>
-                                Thiết bị 2
-                                </Text>
+                                {listDV[1]}
+                            </Text>
                         </View>
                         <View style={{ flex: 1, width: 80, alignContent: 'center', alignItems: 'center', paddingBottom: 10, marginTop: 10 }}>
                             <TouchableWithoutFeedback onPress={() => this.onTB2()}>
@@ -229,7 +230,7 @@ export class CaiDat extends Component {
                     [<Card style={styles.borderBox3} key={"Thiet bi 3"}>
                         <View style={styles.View}>
                             <Text style={styles.Text}>
-                                Thiết bị 3
+                                {listDV[2]}
                             </Text>
                         </View>
                         <View style={{ flex: 1, width: 80, alignContent: 'center', alignItems: 'center', paddingBottom: 10, marginTop: 10 }}>
@@ -244,8 +245,8 @@ export class CaiDat extends Component {
                     <Card style={styles.borderBox4} key={"Thiet Bi 4"}>
                         <View style={styles.View}>
                             <Text style={styles.Text}>
-                                Thiết bị 4
-                                </Text>
+                                {listDV[3]}
+                            </Text>
                         </View>
                         <View style={{ flex: 1, width: 80, alignContent: 'center', alignItems: 'center', paddingBottom: 10, marginTop: 10 }}>
                             <TouchableWithoutFeedback onPress={() => this.onTB4()}>
@@ -466,6 +467,7 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => {
     return {
         id: state.id,
+        listDV: state.listDV
     }
 }
 

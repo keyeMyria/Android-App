@@ -63,6 +63,7 @@ export class AddBar extends Component {
     onPress = (value) => {
         this.props.addCurrentID(value);
         this.props.status_page('CONTROL');
+        this.props.restore_name_dv(this.props.currentID);
     }
 }
 
@@ -99,6 +100,9 @@ const mapDispatchToProps = (dispatch, props) => {
         getListName: () => {
             dispatch(act.getListName());
         },
+        restore_name_dv: (id) => {
+            dispatch(act.restore_name_dv(id));
+        }
     }
 }
 

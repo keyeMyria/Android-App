@@ -9,6 +9,7 @@ import tb from './tb';
 import pointTime from './pointTime';
 import runLong from './runLong';
 import colorDay from './colorDay';
+import listDV from './listDV';
 
 const appReducers = combineReducers({
     id: id,
@@ -20,7 +21,8 @@ const appReducers = combineReducers({
     tb: tb,
     pointTime: pointTime,
     runLong: runLong,
-    colorDay: colorDay
+    colorDay: colorDay,
+    listDV: listDV
 });
 
 export default appReducers;

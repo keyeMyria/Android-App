@@ -191,3 +191,27 @@ export const restore_row_calender = (data) => {
         data: data
     }
 }
+
+export const change_name_dv = (array) => {
+    return {
+        type: Type.CHANGE_NAME_DV,
+        data: array
+    }
+}
+
+
+export const restore_name_dv = (id) => {
+    return dispatch => {
+        AsyncStorage.getItem(`${id}name`).then((names) => {
+            dispatch(dispatch_name_dv(JSON.parse(names)));
+        })
+    }
+}
+
+
+export const dispatch_name_dv = (names) => {
+    return {
+        type: Type.RESTORE_NAME_DV,
+        data: names
+    }
+}
